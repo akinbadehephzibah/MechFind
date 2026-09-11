@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Problem &mdash; Mech Find</title>
+<meta name="description" content="Who is affected, what it costs them, what already exists, and why it is still not enough. The research behind Mech Find.">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16 9.6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17.4v.2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 1.5a12 12 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V4h9v17"/><path d="M14 9h5v12"/><path d="M8 8h3M8 12h3M8 16h3M17 13v4"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M3 20c0-3.4 2.7-5.2 6-5.2s6 1.8 6 5.2"/><path d="M16 5.4a3.4 3.4 0 0 1 0 6.4"/><path d="M17.5 14.6c2.1.6 3.5 2.1 3.5 4.4"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 14l2-6h12l2 6v5h-3v-2H7v2H4z"/><circle cx="7.5" cy="14.5" r="1.3"/><circle cx="16.5" cy="14.5" r="1.3"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M6.5 14.5h3"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.8"/><path d="M6.5 9v6M17.5 9v6"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M5.5 10v8M9.5 10v8M14.5 10v8M18.5 10v8"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 5h8a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h10"/><circle cx="5" cy="5" r="1.6"/><circle cx="19" cy="19" r="1.6"/></symbol>
+  <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6.1 6.1l1.4 1.4M16.5 16.5l1.4 1.4M17.9 6.1l-1.4 1.4M7.5 16.5l-1.4 1.4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+        <span class="brand__text">
+          <span class="brand__name">Mech Find</span>
+          <span class="brand__tag">We find. You drive.</span>
+        </span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
+      <label class="nav-toggle-label" for="nav-toggle">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        <span class="sr-only">Menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="problem.html" aria-current="page">The Problem</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="find.html">Find a Mechanic</a>
+        <a href="trust.html">Trust</a>
+        <a href="guide.html">Guide &amp; FAQ</a>
+        <a href="pod.html">The Pod</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="request.html">Get Started</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>The Problem</li></ol>
+    <p class="eyebrow">Why we built Mech Find</p>
+    <h1>The Problem</h1>
+    <p class="page-head__tagline">Who is affected &middot; What it costs &middot; Why nothing has been enough</p>
+    <p class="lede">Finding the wrong mechanic should not be a Nigerian rite of passage. We asked four questions and refused to stop until we had a serious answer to each one.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our framework</p>
+      <h2>Four questions. Honest answers.</h2>
+      <p class="lede">This is the research that shaped the product. Figures are working estimates drawn from our interviews and desk research during the build.</p>
+    </div>
+
+    <article class="qa">
+      <p class="qa__num">01</p>
+      <div>
+        <h3>Who is affected?</h3>
+        <p>Every Nigerian driver of an imported or locally assembled car. The danfo driver whose Hiace breaks down mid-route. The lawyer whose Lexus develops an electrical fault. The trader whose Honda Accord alternator dies weeks after a &ldquo;repair&rdquo;.</p>
+        <p>That is roughly <strong>22 million vehicles</strong> on Nigerian roads, against a vehicle-to-licensed-mechanic ratio we estimate at <strong>180:1</strong>.</p>
+      </div>
+    </article>
+
+    <article class="qa">
+      <p class="qa__num">02</p>
+      <div>
+        <h3>What does it cost them?</h3>
+        <p>It costs them <strong>twice</strong>. Once for the wrong repair &mdash; typically <strong>&#8358;25,000 to &#8358;180,000</strong> &mdash; and again for the correct one. On top of that they lose <strong>days of mobility</strong>: work, school runs, business deliveries.</p>
+        <p>Across the country, our research suggests Nigerian households absorb <strong>roughly &#8358;450 billion a year</strong> in avoidable repair costs caused by misdiagnosis, counterfeit parts and repeat failures.</p>
+      </div>
+    </article>
+
+    <article class="qa">
+      <p class="qa__num">03</p>
+      <div>
+        <h3>What already exists?</h3>
+        <p>Roadside mechanics. Town mechanics. Specialist workshops. Government-approved garages. Manufacturer service centres. WhatsApp groups full of &ldquo;my guy&rdquo; referrals. National automotive council listings.</p>
+        <p>They all exist. None of them connect a car owner to the <em>right specialist</em> for a specific fault, within a specific distance, inside a specific budget.</p>
+      </div>
+    </article>
+
+    <article class="qa">
+      <p class="qa__num">04</p>
+      <div>
+        <h3>Why is it still not enough?</h3>
+        <p>Because there is no <strong>trust signal beyond word of mouth</strong>. No place to see a mechanic&rsquo;s verified skills, their past work, their distance from you and their availability &mdash; and then reach them in one tap.</p>
+        <p>That gap is the entire reason this platform exists.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Field research</p>
+      <h2>The stories behind the numbers.</h2>
+      <p class="lede">Six accounts gathered during our research week. Names and locations are as given to us by the car owners.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <article class="card">
+        <h3>Stranded on Third Mainland Bridge</h3>
+        <p><strong>Bosede &middot; Lekki to Victoria Island.</strong> Honda Accord, 2014. The alternator warning flickered, then the car died mid-bridge at 7:14am. Towing quoted at &#8358;60,000. Her regular mechanic did not return calls. Two hours in traffic and a lost &#8358;25,000 client meeting.</p>
+      </article>
+      <article class="card">
+        <h3>The counterfeit spark plug</h3>
+        <p><strong>Kabiru &middot; Kano.</strong> Bought &ldquo;original&rdquo; plugs at &#8358;4,500 each from a roadside vendor. Two weeks later the misfiring was worse. A second mechanic showed him the plugs were counterfeit, sold at a 70% markup.</p>
+      </article>
+      <article class="card">
+        <h3>The AC compressor saga</h3>
+        <p><strong>Tunde &middot; Abuja.</strong> Paid &#8358;150,000 for a &ldquo;rebuilt&rdquo; AC compressor. It failed after six weeks. The next mechanic quoted &#8358;210,000 for a genuine unit. Total loss: &#8358;150,000 and three weeks of commuting without air conditioning.</p>
+      </article>
+      <article class="card">
+        <h3>&ldquo;My guy no dey answer&rdquo;</h3>
+        <p><strong>Chinwe &middot; Port Harcourt.</strong> A Maxima gearbox problem. Her &ldquo;guy&rdquo; referred her to another guy, who referred her to a third. Three weeks of phone tag and no repair at the end of it.</p>
+      </article>
+      <article class="card">
+        <h3>The roadside rescue gap</h3>
+        <p><strong>Ibrahim &middot; Ibadan.</strong> Car died at 9pm. On-the-spot &ldquo;mechanics&rdquo; quoted &#8358;80,000 and above. None took card payment. None wrote a receipt. None had a shop address he could return to.</p>
+      </article>
+      <article class="card">
+        <h3>The repeat failure</h3>
+        <p><strong>Aisha &middot; Abuja.</strong> Toyota Corolla. Paid &#8358;65,000 for what was diagnosed as a transmission fault. It turned out to be an ignition coil. The wrong diagnosis cost her the money and the time, twice over.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">What we concluded</p>
+        <h2>The problem is not finding a mechanic. It is finding the right one.</h2>
+        <p class="lede" style="margin-top:16px">Mechanics are everywhere. Relevance, verification and price transparency are not. Every design decision on this platform follows from that single distinction.</p>
+      </div>
+      <div class="card card--flat">
+        <h3>Three things a car owner needs before contact</h3>
+        <ul class="check-list">
+          <li><strong>Relevance</strong> &mdash; does this mechanic work on my car and my fault?</li>
+          <li><strong>Proximity</strong> &mdash; can they reach me, or I them, right now?</li>
+          <li><strong>Trust</strong> &mdash; has anyone verified this person, and what did previous customers say?</li>
+        </ul>
+        <p style="margin-top:20px"><a class="link-arrow" href="how-it-works.html">See how we deliver all three</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="callout">
+      <div class="callout__body">
+        <h2>Stop losing money to wrong diagnoses.</h2>
+        <p>Mech Find matches you with mechanics who know your car, your fault and your location &mdash; before you spend a naira.</p>
+      </div>
+      <a class="btn btn--primary" href="find.html">Find a mechanic</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+          <span class="brand__text">
+            <span class="brand__name">Mech Find</span>
+            <span class="brand__tag">We find. You drive.</span>
+          </span>
+        </a>
+        <p>Connecting Nigerian car owners to verified mechanics &mdash; by car make, by fault, by distance. Built by Viewport Pod.</p>
+        <p style="margin-top:14px">
+          <span class="badge badge--gold">Gold</span>
+          <span class="badge badge--silver">Silver</span>
+          <span class="badge badge--bronze">Bronze</span>
+        </p>
+      </div>
+
+      <div>
+        <h2>Platform</h2>
+        <ul>
+          <li><a href="problem.html">The Problem</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="find.html">Find a Mechanic</a></li>
+          <li><a href="trust.html">Trust &amp; Verification</a></li>
+          <li><a href="request.html">Get Started</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="guide.html">Guide &amp; FAQ</a></li>
+          <li><a href="guide.html#pricing">Pricing guide</a></li>
+          <li><a href="trust.html#escalation">Raise a complaint</a></li>
+          <li><a href="contact.html">Roadside Rescue</a></li>
+          <li><a href="request.html#panel-mech">Become a partner</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          <li><a href="https://wa.me/2348000000000" rel="noopener">WhatsApp us</a></li>
+          <li><a href="mailto:hello@mechfind.ng">hello@mechfind.ng</a></li>
+          <li><a href="contact.html">Victoria Island, Lagos</a></li>
+          <li><a href="pod.html">About the team</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Mech Find &middot; Built by Viewport Pod &middot; Webbo3 Academy</span>
+      <span>Made in Nigeria &middot; We find. You drive.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Started &mdash; Mech Find</title>
+<meta name="description" content="Request a mechanic for your car problem, or apply to join the Mech Find verified mechanic network. Free, with a response within 60 minutes.">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16 9.6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17.4v.2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 1.5a12 12 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V4h9v17"/><path d="M14 9h5v12"/><path d="M8 8h3M8 12h3M8 16h3M17 13v4"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M3 20c0-3.4 2.7-5.2 6-5.2s6 1.8 6 5.2"/><path d="M16 5.4a3.4 3.4 0 0 1 0 6.4"/><path d="M17.5 14.6c2.1.6 3.5 2.1 3.5 4.4"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 14l2-6h12l2 6v5h-3v-2H7v2H4z"/><circle cx="7.5" cy="14.5" r="1.3"/><circle cx="16.5" cy="14.5" r="1.3"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M6.5 14.5h3"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.8"/><path d="M6.5 9v6M17.5 9v6"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M5.5 10v8M9.5 10v8M14.5 10v8M18.5 10v8"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 5h8a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h10"/><circle cx="5" cy="5" r="1.6"/><circle cx="19" cy="19" r="1.6"/></symbol>
+  <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6.1 6.1l1.4 1.4M16.5 16.5l1.4 1.4M17.9 6.1l-1.4 1.4M7.5 16.5l-1.4 1.4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+        <span class="brand__text">
+          <span class="brand__name">Mech Find</span>
+          <span class="brand__tag">We find. You drive.</span>
+        </span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
+      <label class="nav-toggle-label" for="nav-toggle">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        <span class="sr-only">Menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="problem.html">The Problem</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="find.html">Find a Mechanic</a>
+        <a href="trust.html">Trust</a>
+        <a href="guide.html">Guide &amp; FAQ</a>
+        <a href="pod.html">The Pod</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="request.html">Get Started</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Get Started</li></ol>
+    <p class="eyebrow">Two paths, one platform</p>
+    <h1>Get started</h1>
+    <p class="page-head__tagline">Need a mechanic? Or are you one?</p>
+    <p class="lede">Tell us what is wrong with your car, or apply to join the verified network. Both sides of the platform start here.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tabs">
+
+      <!-- Mechanic application (shown when #panel-mech is the target) -->
+      <div class="tab-panel" id="panel-mech">
+        <div class="form-card">
+          <h2>Join the Mech Find mechanic network</h2>
+          <p class="lede" style="margin:10px 0 0">Free onboarding. No monthly fee. A 5% commission applies only to completed Gold-tier jobs sourced through us, capped at &#8358;5,000.</p>
+
+          <form action="thank-you.html" method="get" style="margin-top:28px">
+            <input type="hidden" name="type" value="mechanic">
+
+            <fieldset>
+              <legend>About you</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="m-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="m-name" name="name" placeholder="Emeka Nwosu" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="m-phone">Phone (WhatsApp) <span class="req" aria-hidden="true">*</span></label>
+                  <input type="tel" id="m-phone" name="phone" placeholder="+234 800 000 0000" autocomplete="tel" pattern="[0-9 +()-]{7,20}" required>
+                  <span class="hint">Numbers, spaces and + only.</span>
+                </div>
+                <div class="field">
+                  <label for="m-email">Email <span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" id="m-email" name="email" placeholder="you@email.com" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="m-nin">NIN / National ID number <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="m-nin" name="nin" placeholder="01234567890" pattern="[0-9]{11}" required>
+                  <span class="hint">11 digits. Used only for Bronze-tier verification.</span>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Your workshop</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="m-shop">Workshop name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="m-shop" name="workshop" placeholder="Nwozzy Auto Services" required>
+                </div>
+                <div class="field">
+                  <label for="m-lga">City / LGA <span class="req" aria-hidden="true">*</span></label>
+                  <select id="m-lga" name="lga" required>
+                    <option value="">Select your area</option>
+                    <option>Ikeja, Lagos</option>
+                    <option>Yaba, Lagos</option>
+                    <option>Ojodu-Berger, Lagos</option>
+                    <option>Surulere, Lagos</option>
+                    <option>Lekki, Lagos</option>
+                    <option>Garki, Abuja</option>
+                    <option>Wuse, Abuja</option>
+                    <option>GRA, Port Harcourt</option>
+                    <option>Bodija, Ibadan</option>
+                    <option>Nasarawa, Kano</option>
+                    <option>Elsewhere in Nigeria</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="m-years">Years of experience <span class="req" aria-hidden="true">*</span></label>
+                  <select id="m-years" name="experience" required>
+                    <option value="">Select</option>
+                    <option>0&ndash;2 years</option>
+                    <option>2&ndash;5 years</option>
+                    <option>5&ndash;10 years</option>
+                    <option>10&ndash;20 years</option>
+                    <option>20+ years</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="m-tier">Tier you are applying for</label>
+                  <select id="m-tier" name="tier">
+                    <option>Bronze &mdash; ID and one reference</option>
+                    <option>Silver &mdash; plus a skill assessment</option>
+                    <option>Gold &mdash; plus a shop visit</option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="m-skills">Skills <span class="req" aria-hidden="true">*</span></label>
+                  <select id="m-skills" name="skills" multiple required>
+                    <option>Engine</option><option>Transmission</option><option>Brakes</option>
+                    <option>Electrical</option><option>AC / climate</option><option>Suspension</option>
+                    <option>Bodywork</option><option>Diagnostics</option><option>Roadside rescue</option>
+                    <option>Oil change</option><option>Tyres</option><option>Battery</option>
+                  </select>
+                  <span class="hint">Hold Ctrl (or Cmd on Mac) to select more than one.</span>
+                </div>
+                <div class="field field--full">
+                  <label for="m-makes">Car makes you service <span class="req" aria-hidden="true">*</span></label>
+                  <select id="m-makes" name="makes" multiple required>
+                    <option>Toyota</option><option>Honda</option><option>Lexus</option>
+                    <option>Mercedes-Benz</option><option>Hyundai</option><option>Kia</option>
+                    <option>Nissan</option><option>Volkswagen</option><option>Peugeot</option>
+                    <option>Mitsubishi</option><option>Ford</option><option>Land Rover</option><option>Suzuki</option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="m-certs">Certifications (optional)</label>
+                  <textarea id="m-certs" name="certifications" placeholder="National automotive council registration, manufacturer training, apprenticeship completion..."></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="consent">
+              <input type="checkbox" id="m-consent" name="consent" value="yes" required>
+              <label for="m-consent" style="font-weight:400;margin:0">I confirm the details above are accurate and I agree to a Mech Find verification check. <span class="req" aria-hidden="true">*</span></label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">Apply to join</button>
+              <button class="btn btn--ghost" type="reset">Clear form</button>
+            </div>
+          </form>
+
+          <div class="form-note">
+            <strong>What happens next:</strong> a verification agent will WhatsApp you within 48 hours to begin Bronze-tier verification. There is nothing to pay to apply.
+          </div>
+        </div>
+      </div>
+
+      <!-- Car owner request (default panel) -->
+      <div class="tab-panel" id="panel-owner">
+        <div class="form-card">
+          <h2>Tell us what is wrong. We will sort it out.</h2>
+          <p class="lede" style="margin:10px 0 0">Free request. Response within 60 minutes. Nothing to pay upfront, and no card details taken.</p>
+
+          <form action="thank-you.html" method="get" style="margin-top:28px">
+            <input type="hidden" name="type" value="owner">
+
+            <fieldset>
+              <legend>How we reach you</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="o-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="o-name" name="name" placeholder="Chinwe Okeke" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="o-phone">Phone (WhatsApp active) <span class="req" aria-hidden="true">*</span></label>
+                  <input type="tel" id="o-phone" name="phone" placeholder="+234 800 000 0000" autocomplete="tel" pattern="[0-9 +()-]{7,20}" required>
+                </div>
+                <div class="field field--full">
+                  <label for="o-email">Email (optional)</label>
+                  <input type="email" id="o-email" name="email" placeholder="you@email.com" autocomplete="email">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Your car and your location</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="o-make">Car make <span class="req" aria-hidden="true">*</span></label>
+                  <select id="o-make" name="make" required>
+                    <option value="">Select make</option>
+                    <option>Toyota</option><option>Honda</option><option>Lexus</option>
+                    <option>Mercedes-Benz</option><option>Hyundai</option><option>Kia</option>
+                    <option>Nissan</option><option>Volkswagen</option><option>Peugeot</option>
+                    <option>Mitsubishi</option><option>Ford</option><option>Land Rover</option>
+                    <option>Suzuki</option><option>Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="o-model">Model and year <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="o-model" name="model" placeholder="Corolla 2016" required>
+                </div>
+                <div class="field">
+                  <label for="o-lga">City / LGA <span class="req" aria-hidden="true">*</span></label>
+                  <select id="o-lga" name="lga" required>
+                    <option value="">Select your area</option>
+                    <option>Ikeja, Lagos</option>
+                    <option>Yaba, Lagos</option>
+                    <option>Ojodu-Berger, Lagos</option>
+                    <option>Surulere, Lagos</option>
+                    <option>Lekki, Lagos</option>
+                    <option>Victoria Island, Lagos</option>
+                    <option>Garki, Abuja</option>
+                    <option>Wuse, Abuja</option>
+                    <option>GRA, Port Harcourt</option>
+                    <option>Bodija, Ibadan</option>
+                    <option>Nasarawa, Kano</option>
+                    <option>Elsewhere in Nigeria</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="o-urgency">How urgent is it? <span class="req" aria-hidden="true">*</span></label>
+                  <select id="o-urgency" name="urgency" required>
+                    <option value="">Select</option>
+                    <option>Stranded right now</option>
+                    <option>Today, if possible</option>
+                    <option>Within the next few days</option>
+                    <option>Just getting a quote</option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="o-where">Where exactly are you? <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="o-where" name="location" placeholder="Berger bus stop, facing the bridge" required>
+                  <span class="hint">A landmark helps more than a street name.</span>
+                </div>
+                <div class="field field--full">
+                  <label for="o-fault">Describe the fault <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="o-fault" name="fault" placeholder="Car will not start in the morning. Dashboard lights flicker. Possibly the alternator." required></textarea>
+                  <span class="hint">Photographs help. Send them to us on WhatsApp after you submit this form.</span>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="consent">
+              <input type="checkbox" id="o-consent" name="consent" value="yes" required>
+              <label for="o-consent" style="font-weight:400;margin:0">I agree that Mech Find may share these details with matched mechanics so they can contact me. <span class="req" aria-hidden="true">*</span></label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">Submit request</button>
+              <a class="btn btn--whatsapp" href="https://wa.me/2348000000000?text=Hello%20Mech%20Find%2C%20I%20need%20a%20mechanic%20for%20my%20car." rel="noopener">WhatsApp instead</a>
+              <button class="btn btn--ghost" type="reset">Clear form</button>
+            </div>
+          </form>
+
+          <div class="form-note">
+            <strong>What happens next:</strong> you will not be charged anything. We WhatsApp you the name, tier and call-out fee of up to three available mechanics near you, for your approval before anyone is dispatched.
+          </div>
+        </div>
+      </div>
+
+      <nav class="tab-list" aria-label="Choose a form">
+        <a href="#panel-owner">I need a mechanic</a>
+        <a href="#panel-mech">I am a mechanic</a>
+      </nav>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-clock"/></svg></span>
+        <h3>60-minute response</h3>
+        <p>Requests submitted between 8am and 10pm are matched within the hour. Outside those times, first thing the next morning.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-cash"/></svg></span>
+        <h3>Nothing to pay upfront</h3>
+        <p>No deposit, no card details, no subscription. You pay the mechanic directly once you have both agreed the scope and price.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-shield"/></svg></span>
+        <h3>Your details stay private</h3>
+        <p>We share your contact details only with the mechanics matched to your request, and only after you have approved them.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="callout callout--alert">
+      <div class="callout__body">
+        <h2>Stranded right now?</h2>
+        <p>Do not fill a form. Call the 24-hour rescue hotline and we will dispatch the nearest partner mechanic.</p>
+      </div>
+      <a class="btn btn--light" href="tel:+2348000000002">Call +234 800 000 0002</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+          <span class="brand__text">
+            <span class="brand__name">Mech Find</span>
+            <span class="brand__tag">We find. You drive.</span>
+          </span>
+        </a>
+        <p>Connecting Nigerian car owners to verified mechanics &mdash; by car make, by fault, by distance. Built by Viewport Pod.</p>
+        <p style="margin-top:14px">
+          <span class="badge badge--gold">Gold</span>
+          <span class="badge badge--silver">Silver</span>
+          <span class="badge badge--bronze">Bronze</span>
+        </p>
+      </div>
+
+      <div>
+        <h2>Platform</h2>
+        <ul>
+          <li><a href="problem.html">The Problem</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="find.html">Find a Mechanic</a></li>
+          <li><a href="trust.html">Trust &amp; Verification</a></li>
+          <li><a href="request.html">Get Started</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="guide.html">Guide &amp; FAQ</a></li>
+          <li><a href="guide.html#pricing">Pricing guide</a></li>
+          <li><a href="trust.html#escalation">Raise a complaint</a></li>
+          <li><a href="contact.html">Roadside Rescue</a></li>
+          <li><a href="request.html#panel-mech">Become a partner</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          <li><a href="https://wa.me/2348000000000" rel="noopener">WhatsApp us</a></li>
+          <li><a href="mailto:hello@mechfind.ng">hello@mechfind.ng</a></li>
+          <li><a href="contact.html">Victoria Island, Lagos</a></li>
+          <li><a href="pod.html">About the team</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Mech Find &middot; Built by Viewport Pod &middot; Webbo3 Academy</span>
+      <span>Made in Nigeria &middot; We find. You drive.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

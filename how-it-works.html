@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How It Works &mdash; Mech Find</title>
+<meta name="description" content="Search, view profile, contact, completed job. The four-step Mech Find journey, the six questions every profile answers, and how payment works.">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16 9.6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17.4v.2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 1.5a12 12 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V4h9v17"/><path d="M14 9h5v12"/><path d="M8 8h3M8 12h3M8 16h3M17 13v4"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M3 20c0-3.4 2.7-5.2 6-5.2s6 1.8 6 5.2"/><path d="M16 5.4a3.4 3.4 0 0 1 0 6.4"/><path d="M17.5 14.6c2.1.6 3.5 2.1 3.5 4.4"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 14l2-6h12l2 6v5h-3v-2H7v2H4z"/><circle cx="7.5" cy="14.5" r="1.3"/><circle cx="16.5" cy="14.5" r="1.3"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M6.5 14.5h3"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.8"/><path d="M6.5 9v6M17.5 9v6"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M5.5 10v8M9.5 10v8M14.5 10v8M18.5 10v8"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 5h8a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h10"/><circle cx="5" cy="5" r="1.6"/><circle cx="19" cy="19" r="1.6"/></symbol>
+  <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6.1 6.1l1.4 1.4M16.5 16.5l1.4 1.4M17.9 6.1l-1.4 1.4M7.5 16.5l-1.4 1.4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+        <span class="brand__text">
+          <span class="brand__name">Mech Find</span>
+          <span class="brand__tag">We find. You drive.</span>
+        </span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
+      <label class="nav-toggle-label" for="nav-toggle">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        <span class="sr-only">Menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="problem.html">The Problem</a>
+        <a href="how-it-works.html" aria-current="page">How It Works</a>
+        <a href="find.html">Find a Mechanic</a>
+        <a href="trust.html">Trust</a>
+        <a href="guide.html">Guide &amp; FAQ</a>
+        <a href="pod.html">The Pod</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="request.html">Get Started</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>How It Works</li></ol>
+    <p class="eyebrow">From breakdown to driving again</p>
+    <h1>How Mech Find works</h1>
+    <p class="page-head__tagline">Search &rarr; View profile &rarr; Contact &rarr; Completed job</p>
+    <p class="lede">Four steps. Under fifteen minutes from &ldquo;my car just died&rdquo; to a verified mechanic who has handled a job like yours this week.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The four steps</p>
+      <h2>Designed for Nigerians. Built for panic moments.</h2>
+      <p class="lede">No sign-up, no email gate, no app download. The whole journey works on a phone with a weak connection.</p>
+    </div>
+
+    <div class="grid grid-4 steps">
+      <article class="step">
+        <h3>Search</h3>
+        <p>Tell us your car make, your fault and your location. The directory filters down to verified mechanics near you.</p>
+      </article>
+      <article class="step">
+        <h3>View profile</h3>
+        <p>Skills, car makes serviced, distance, verification tier, ratings, reviews and indicative pricing in Naira &mdash; before you call.</p>
+      </article>
+      <article class="step">
+        <h3>Contact</h3>
+        <p>Tap to call or WhatsApp. Agree the scope and the price. Pay a deposit by transfer, POS or cash. They come to you, or you drive in.</p>
+      </article>
+      <article class="step">
+        <h3>Completed job</h3>
+        <p>Workmanship warranty on Gold-tier bookings. Leave a review so the next person benefits from what you learned.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">What you always see</p>
+        <h2>Every profile answers the same six questions.</h2>
+        <p class="lede" style="margin-top:16px">No listing goes live until all six are on file and confirmed. That consistency is what makes profiles comparable instead of decorative.</p>
+        <p style="margin-top:24px"><a class="link-arrow" href="find.html">Open the directory</a></p>
+      </div>
+
+      <ul class="feature-list">
+        <li><strong>1. What skills do you have?</strong><span>Engine, transmission, electrical, AC, brakes, suspension, bodywork, diagnostics.</span></li>
+        <li><strong>2. What car makes do you service?</strong><span>Toyota, Honda, Lexus, Mercedes-Benz, Hyundai, Kia, Nissan, Volkswagen, Peugeot, Mitsubishi, Ford, Land Rover, Suzuki.</span></li>
+        <li><strong>3. How far are you?</strong><span>Distance from the car owner&rsquo;s location, shown on every result.</span></li>
+        <li><strong>4. Are you verified?</strong><span>A Bronze, Silver or Gold tier badge, earned and rechecked annually.</span></li>
+        <li><strong>5. What do you charge?</strong><span>Indicative Naira ranges, published before any contact is made.</span></li>
+        <li><strong>6. When are you available?</strong><span>A week view, so nobody loses a day to phone tag.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Payment</p>
+      <h2>Three ways to pay. All of them yours to choose.</h2>
+      <p class="lede">Mech Find does not sit between you and your money. You pay the mechanic directly, by whichever method you both agree.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-bank"/></svg></span>
+        <h3>Bank transfer</h3>
+        <p>Paid into the mechanic&rsquo;s verified business account, with a receipt issued. Easiest route if a claim ever needs escalating.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-card"/></svg></span>
+        <h3>POS or card</h3>
+        <p>Most Gold-tier mechanics carry a POS terminal. Pay on delivery of the car, without carrying large amounts of cash.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-cash"/></svg></span>
+        <h3>Cash on delivery</h3>
+        <p>Inspect the work first, then pay. Standard for jobs under &#8358;50,000. Always ask for a written receipt, even for cash.</p>
+      </article>
+    </div>
+
+    <div class="notice" style="margin-top:32px">
+      <svg class="icon icon--lg" aria-hidden="true" style="color:var(--brand-dark)"><use href="#i-shield"/></svg>
+      <div>
+        <h4>Mech Find takes nothing from the car owner</h4>
+        <p class="small" style="margin:0">Our commission is charged to the mechanic on completed Gold-tier jobs, capped at &#8358;5,000. The price you agree is the price you pay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What we ask of both sides</p>
+      <h2>The rules that keep the platform honest.</h2>
+    </div>
+
+    <div class="grid grid-2">
+      <article class="card">
+        <h3>What we ask of mechanics</h3>
+        <ul class="check-list">
+          <li>Quote a scope and a price before starting work.</li>
+          <li>Issue a receipt on every job, cash included.</li>
+          <li>Use genuine parts, or say clearly when an alternative is fitted.</li>
+          <li>Honour the warranty attached to your tier.</li>
+          <li>Keep your availability on the profile current.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>What we ask of car owners</h3>
+        <ul class="check-list">
+          <li>Describe the fault as precisely as you can.</li>
+          <li>Agree the scope and price before work starts.</li>
+          <li>Keep the receipt and the booking reference.</li>
+          <li>Pay promptly once the work is done and inspected.</li>
+          <li>Leave an honest review, good or bad.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="callout">
+      <div class="callout__body">
+        <h2>Ready to try it?</h2>
+        <p>Search verified mechanics near you right now. No sign-up needed, and nothing to pay to look.</p>
+      </div>
+      <a class="btn btn--primary" href="find.html">Find a mechanic</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+          <span class="brand__text">
+            <span class="brand__name">Mech Find</span>
+            <span class="brand__tag">We find. You drive.</span>
+          </span>
+        </a>
+        <p>Connecting Nigerian car owners to verified mechanics &mdash; by car make, by fault, by distance. Built by Viewport Pod.</p>
+        <p style="margin-top:14px">
+          <span class="badge badge--gold">Gold</span>
+          <span class="badge badge--silver">Silver</span>
+          <span class="badge badge--bronze">Bronze</span>
+        </p>
+      </div>
+
+      <div>
+        <h2>Platform</h2>
+        <ul>
+          <li><a href="problem.html">The Problem</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="find.html">Find a Mechanic</a></li>
+          <li><a href="trust.html">Trust &amp; Verification</a></li>
+          <li><a href="request.html">Get Started</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="guide.html">Guide &amp; FAQ</a></li>
+          <li><a href="guide.html#pricing">Pricing guide</a></li>
+          <li><a href="trust.html#escalation">Raise a complaint</a></li>
+          <li><a href="contact.html">Roadside Rescue</a></li>
+          <li><a href="request.html#panel-mech">Become a partner</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          <li><a href="https://wa.me/2348000000000" rel="noopener">WhatsApp us</a></li>
+          <li><a href="mailto:hello@mechfind.ng">hello@mechfind.ng</a></li>
+          <li><a href="contact.html">Victoria Island, Lagos</a></li>
+          <li><a href="pod.html">About the team</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Mech Find &middot; Built by Viewport Pod &middot; Webbo3 Academy</span>
+      <span>Made in Nigeria &middot; We find. You drive.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Mech Find — WE FIND. YOU DRIVE. Nigeria's verified mechanic platform.">
+<title>Mech Find — We Find. You Drive. | Nigeria's verified mechanic platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="https://www.genspark.ai/api/files/s/0QWuxraa?cache_control=3600">
+<style>
+/* ===================================================================
+   MECH FIND — WE FIND. YOU DRIVE.
+   Brand: silver chrome, crimson red, black charcoal
+   Author: Viewport Pod · Webbo3 Academy
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --c-red:#E5101C;
+  --c-red-deep:#80060C;
+  --c-red-glow:rgba(229,16,28,.45);
+  --c-silver:#D1D5DB;
+  --c-silver-deep:#4B5563;
+  --c-silver-bright:#F7F7F8;
+  --c-ink:#000000;
+  --c-bg:#0B0B0F;
+  --c-card:#15151B;
+  --c-card-2:#1C1C24;
+  --c-line:rgba(255,255,255,.08);
+  --c-whats:#25D366;
+  --c-text:#E6E6E6;
+  --c-mute:#9CA3AF;
+  --radius:14px;
+  --radius-lg:22px;
+  --shadow-red:0 14px 40px -10px rgba(229,16,28,.55);
+  --shadow-dark:0 20px 60px -20px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--c-bg);color:var(--c-text);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+a{color:var(--c-silver);text-decoration:none;transition:color .2s}
+a:hover{color:var(--c-red)}
+img{max-width:100%;display:block}
+button,input,select,textarea{font-family:inherit;font-size:1rem}
+
+/* ---------- NAV ---------- */
+.nav{position:sticky;top:0;z-index:100;background:rgba(11,11,15,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--c-line)}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo img{height:44px;width:auto;filter:drop-shadow(0 0 8px rgba(229,16,28,.15))}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{padding:10px 14px;border-radius:8px;font-weight:500;font-size:.92rem;letter-spacing:.02em}
+.nav-links a.active,.nav-links a:hover{background:rgba(229,16,28,.1);color:var(--c-red)}
+.nav-cta{padding:10px 18px;background:var(--c-red);color:#fff;border-radius:10px;font-weight:600;font-size:.9rem}
+.nav-cta:hover{background:#ff2a37;color:#fff}
+.menu-btn{display:none;background:none;border:1px solid var(--c-line);color:#fff;padding:8px 11px;border-radius:8px;font-size:1.2rem;cursor:pointer}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--c-line)}
+.hero-bg{position:absolute;inset:0;background:url('https://www.genspark.ai/api/files/s/tPzChQaX?cache_control=3600') center/cover no-repeat;filter:brightness(.45) contrast(1.05)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,15,.4) 0%,rgba(11,11,15,.95) 100%)}
+.hero-content{position:relative;max-width:1280px;margin:0 auto;padding:120px 22px 80px;width:100%}
+.hero-kicker{display:inline-block;text-transform:uppercase;letter-spacing:.3em;font-size:.78rem;font-weight:600;color:var(--c-red);padding:6px 14px;border:1px solid var(--c-red);border-radius:99px;margin-bottom:24px}
+.hero h1{font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(2.4rem,6vw,5rem);line-height:1.05;background:linear-gradient(180deg,#fff 0%,#8a8d96 100%);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:18px}
+.hero h1 .red{display:inline-block;background:linear-gradient(180deg,#ff2a37,#80060C);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-tagline{font-family:'Rajdhani',sans-serif;text-transform:uppercase;letter-spacing:.5em;font-size:1.05rem;color:var(--c-silver);margin-bottom:28px}
+.hero p.lede{font-size:1.15rem;max-width:620px;color:#cdd0d6;margin-bottom:36px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:12px;font-weight:600;font-size:1rem;cursor:pointer;border:none;transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:linear-gradient(135deg,var(--c-red),var(--c-red-deep));color:#fff;box-shadow:var(--shadow-red)}
+.btn-red:hover{box-shadow:0 20px 50px -10px rgba(229,16,28,.7)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn-ghost:hover{border-color:var(--c-red);color:var(--c-red)}
+.btn-whats{background:var(--c-whats);color:#04260f}
+.btn-whats:hover{background:#2bdc75;color:#04260f}
+
+/* ---------- SECTIONS ---------- */
+section{padding:90px 22px}
+.wrap{max-width:1280px;margin:0 auto}
+.section-head{margin-bottom:48px;max-width:780px}
+.kicker{display:inline-block;text-transform:uppercase;letter-spacing:.3em;font-size:.75rem;font-weight:600;color:var(--c-red);margin-bottom:14px}
+h2{font-family:'Orbitron',sans-serif;font-weight:700;font-size:clamp(1.8rem,3.6vw,2.8rem);background:linear-gradient(180deg,#fff,#9aa0aa);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px;line-height:1.15}
+h2 .red{background:linear-gradient(180deg,#ff2a37,#80060C);-webkit-background-clip:text;background-clip:text;color:transparent}
+h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.4rem;color:#fff;margin-bottom:8px}
+h4{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:1.05rem;color:#fff;margin-bottom:6px}
+.lede{color:#cdd0d6;font-size:1.05rem;max-width:680px}
+
+/* ---------- GRID & CARDS ---------- */
+.grid{display:grid;gap:24px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(360px,1fr))}
+.card{background:linear-gradient(180deg,var(--c-card),var(--c-card-2));border:1px solid var(--c-line);border-radius:var(--radius-lg);padding:28px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);border-color:rgba(229,16,28,.4);box-shadow:0 24px 60px -20px rgba(0,0,0,.7)}
+.card .icon{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--c-red),var(--c-red-deep));display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;margin-bottom:18px;box-shadow:var(--shadow-red)}
+.card p{color:var(--c-mute)}
+
+/* ---------- STATS ---------- */
+.stats{background:linear-gradient(135deg,#15151B,#0B0B0F);border:1px solid var(--c-line);border-radius:var(--radius-lg);padding:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;text-align:center}
+.stat .n{font-family:'Orbitron',sans-serif;font-size:1.8rem;color:var(--c-red);font-weight:700}
+.stat .l{color:var(--c-mute);text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;margin-top:6px}
+
+/* ---------- PROBLEM PAGE ---------- */
+.problem-q{display:flex;gap:18px;align-items:flex-start;padding:24px;background:var(--c-card);border-left:4px solid var(--c-red);border-radius:0 var(--radius) var(--radius) 0;margin-bottom:16px}
+.problem-q .num{font-family:'Orbitron',sans-serif;color:var(--c-red);font-weight:700;font-size:1.4rem;min-width:36px}
+
+/* ---------- HOW IT WORKS ---------- */
+.steps{position:relative;counter-reset:step}
+.step{position:relative;padding:28px;background:var(--c-card);border:1px solid var(--c-line);border-radius:var(--radius);text-align:left}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-22px;left:-22px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#fff,#bcc1c8);color:#111;font-weight:800;display:flex;align-items:center;justify-content:center;font-family:'Orbitron';box-shadow:var(--shadow-red)}
+
+/* ---------- SEARCH / FIND PAGE ---------- */
+.search-panel{background:linear-gradient(180deg,#15151B,#0B0B0F);border:1px solid var(--c-line);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-dark)}
+.search-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:14px}
+.field label{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--c-mute);margin-bottom:6px}
+.field input,.field select{width:100%;background:#0B0B0F;border:1px solid var(--c-line);color:#fff;padding:12px 14px;border-radius:10px;transition:border-color .2s;outline:none}
+.field input:focus,.field select:focus{border-color:var(--c-red)}
+.range-val{color:var(--c-red);font-weight:600;margin-left:8px}
+.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:28px}
+.mech{background:linear-gradient(180deg,#15151B,#101015);border:1px solid var(--c-line);border-radius:var(--radius-lg);overflow:hidden;transition:transform .2s,border-color .2s}
+.mech:hover{transform:translateY(-3px);border-color:rgba(229,16,28,.35)}
+.mech-top{display:flex;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid var(--c-line)}
+.avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#E5101C,#80060C);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-family:'Orbitron'}
+.mech-info .nm{font-weight:600;color:#fff}
+.mech-info .meta{font-size:.85rem;color:var(--c-mute)}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:99px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.b-gold{background:linear-gradient(135deg,#FFD700,#B8860B);color:#3a2a00}
+.b-silver{background:linear-gradient(135deg,#D1D5DB,#9aa0aa);color:#222}
+.b-bronze{background:linear-gradient(135deg,#CD7F32,#8B5A2B);color:#fff}
+.mech-tags{display:flex;flex-wrap:wrap;gap:6px;padding:14px 20px}
+.tag{font-size:.75rem;background:rgba(229,16,28,.1);color:#ffd2d6;border:1px solid rgba(229,16,28,.3);padding:4px 10px;border-radius:99px}
+.mech-foot{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-top:1px solid var(--c-line);background:rgba(0,0,0,.3)}
+.rating{color:#FFD700;font-weight:700}
+.dist{color:var(--c-mute);font-size:.85rem}
+.act{display:flex;gap:8px}
+.act a{padding:7px 12px;border-radius:8px;font-size:.8rem;font-weight:600}
+.act .call{background:var(--c-red);color:#fff}
+.act .wp{background:var(--c-whats);color:#04260f}
+.act .vm{background:transparent;border:1px solid var(--c-line);color:#fff}
+
+/* ---------- DETAIL PAGE ---------- */
+.detail-hero{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:start}
+.profile-card{background:linear-gradient(180deg,#15151B,#0B0B0F);border:1px solid var(--c-line);border-radius:var(--radius-lg);padding:32px;text-align:center}
+.profile-card .avatar{width:120px;height:120px;font-size:2rem;margin:0 auto 16px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px}
+.cal div{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:.8rem;border-radius:8px;background:#15151B;color:var(--c-mute)}
+.cal div.free{background:rgba(229,16,28,.18);color:#fff}
+.cal div.busy{background:rgba(255,255,255,.06);color:var(--c-mute)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gallery div{aspect-ratio:1;border-radius:12px;background:linear-gradient(135deg,#1f1f28,#0B0B0F);display:flex;align-items:center;justify-content:center;color:var(--c-mute);font-size:.8rem;border:1px solid var(--c-line)}
+.review{background:var(--c-card);border:1px solid var(--c-line);border-radius:var(--radius);padding:20px;margin-bottom:14px}
+.review .who{font-weight:600;color:#fff}
+.review .when{font-size:.8rem;color:var(--c-mute)}
+
+/* ---------- TIER SYSTEM ---------- */
+.tier{position:relative;padding:34px 26px;background:linear-gradient(180deg,#15151B,#0B0B0F);border-radius:var(--radius-lg);border:1px solid var(--c-line)}
+.tier .ribbon{position:absolute;top:18px;right:18px}
+.tier ul{list-style:none;margin-top:14px}
+.tier li{padding:8px 0;color:var(--c-text);border-bottom:1px solid var(--c-line);font-size:.92rem}
+.tier li:before{content:"✓ ";color:var(--c-red);font-weight:700}
+
+/* ---------- FORMS ---------- */
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.field.full{grid-column:1/-1}
+.field input,.field select,.field textarea{width:100%;background:#0B0B0F;border:1px solid var(--c-line);color:#fff;padding:14px 16px;border-radius:10px;outline:none;transition:border-color .2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--c-red)}
+.field textarea{min-height:120px;resize:vertical}
+.tabs{display:flex;gap:0;border:1px solid var(--c-line);border-radius:12px;overflow:hidden;margin-bottom:24px}
+.tabs button{flex:1;background:transparent;color:#fff;padding:14px;border:none;cursor:pointer;font-weight:600;border-right:1px solid var(--c-line)}
+.tabs button:last-child{border-right:none}
+.tabs button.act{background:var(--c-red)}
+.tabs-wrap>div{display:none}
+.tabs-wrap>div.act{display:block}
+.success{display:none;text-align:center;padding:48px 24px;background:linear-gradient(135deg,rgba(37,211,102,.12),rgba(229,16,28,.08));border:1px solid var(--c-whats);border-radius:var(--radius-lg);margin-top:24px}
+.success.show{display:block}
+.success .check{width:70px;height:70px;border-radius:50%;background:var(--c-whats);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:2rem;color:#04260f}
+
+/* ---------- FAQ ---------- */
+.faq-item{background:var(--c-card);border:1px solid var(--c-line);border-radius:var(--radius);margin-bottom:14px;overflow:hidden}
+.faq-q{padding:20px 24px;font-weight:600;cursor:pointer;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:"+";color:var(--c-red);font-size:1.4rem;font-weight:700}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{display:none;padding:0 24px 20px;color:var(--c-mute);border-top:1px solid var(--c-line);padding-top:16px}
+.faq-item.open .faq-a{display:block}
+
+/* ---------- POD (Team) ---------- */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.member{background:linear-gradient(180deg,#15151B,#0B0B0F);border:1px solid var(--c-line);border-radius:var(--radius-lg);padding:24px;text-align:center;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.member:hover{transform:translateY(-4px);border-color:rgba(229,16,28,.4)}
+.member .pic{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#E5101C,#80060C);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:'Orbitron';font-weight:700;color:#fff;font-size:1.4rem}
+.member .role{font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--c-red);margin-top:4px}
+
+/* ---------- FOOTER ---------- */
+footer{background:#050507;border-top:1px solid var(--c-line);padding:60px 22px 30px;margin-top:60px}
+.foot-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.foot-brand img{height:46px;margin-bottom:18px}
+.foot-brand p{color:var(--c-mute);font-size:.92rem;max-width:340px}
+.foot h5{font-family:'Rajdhani';color:#fff;text-transform:uppercase;letter-spacing:.18em;font-size:.84rem;margin-bottom:18px}
+.foot ul{list-style:none}
+.foot ul li{margin-bottom:10px}
+.foot ul li a{color:var(--c-mute);font-size:.92rem}
+.foot ul li a:hover{color:var(--c-red)}
+.foot-bot{max-width:1280px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--c-line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--c-mute);font-size:.85rem}
+
+/* ---------- ROAD RESCUE BANNER ---------- */
+.rescue{background:linear-gradient(135deg,#80060C,#E5101C);color:#fff;padding:18px 28px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;box-shadow:var(--shadow-red)}
+
+/* ---------- IMAGES ---------- */
+.hero-img{position:relative;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--c-line);box-shadow:var(--shadow-dark)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:880px){
+  .menu-btn{display:inline-flex}
+  .nav-links{position:fixed;top:72px;right:-100%;width:78%;max-width:340px;height:calc(100vh - 72px);background:#0B0B0F;border-left:1px solid var(--c-line);flex-direction:column;align-items:stretch;padding:24px;transition:right .3s}
+  .nav-links.open{right:0}
+  .nav-links a{padding:14px;border-bottom:1px solid var(--c-line)}
+  .detail-hero{grid-template-columns:1fr}
+  .foot-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .foot-inner{grid-template-columns:1fr}
+  section{padding:60px 18px}
+  .hero-content{padding:90px 18px 60px}
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#index"><img src="https://www.genspark.ai/api/files/s/IfmJBbLr" alt="Mech Find logo"></a>
+    <div class="nav-links" id="nav">
+      <a href="#index" data-route="index">Home</a>
+      <a href="#problem" data-route="problem">The Problem</a>
+      <a href="#how" data-route="how">How It Works</a>
+      <a href="#find" data-route="find">Find a Mechanic</a>
+      <a href="#trust" data-route="trust">Trust</a>
+      <a href="#guide" data-route="guide">Guide &amp; FAQ</a>
+      <a href="#pod" data-route="pod">The Pod</a>
+      <a href="#contact" data-route="contact">Contact</a>
+      <a class="nav-cta" href="#request" data-route="request">Get Started</a>
+    </div>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<main id="app">
+<section class="page page-index" data-page="index">
+<div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="hero-kicker">🇳🇬 Built in Nigeria · Made for Nigerian roads</span>
+    <h1>Stranded? <span class="red">Mech Find</span> sorts you out.</h1>
+    <div class="hero-tagline">WE FIND. YOU DRIVE.</div>
+    <p class="lede">Mech Find connects Nigerian car owners to the right verified mechanic — by car make, by fault, by distance. No more guesswork, no more abandoned cars on Third Mainland Bridge at midnight.</p>
+    <div class="hero-cta">
+      <a class="btn btn-red" href="find.html">🔧 Find a Mechanic</a>
+      <a class="btn btn-whats" href="https://wa.me/2348000000000?text=Hello%20Mech%20Find%2C%20I%20need%20help%20with%20my%20car.">🟢 WhatsApp Us</a>
+      <a class="btn btn-ghost" href="request.html">👨‍🔧 Join as Mechanic</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Your journey</span>
+      <h2>Five steps from a problem car <span class="red">to a working car</span>.</h2>
+      <p class="lede">Find the right specialist → Understand the cost → Build trust → Get the repair → Have accountability after the job.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="icon">🔍</div><h3>Find the right specialist</h3><p>Filter by car make, fault type, state, and distance. We match you to mechanics who actually know your car.</p></div>
+      <div class="card"><div class="icon">💰</div><h3>Understand the cost</h3><p>See pricing ranges upfront, in Naira, before you commit. Pay by bank transfer, POS, or cash on delivery.</p></div>
+      <div class="card"><div class="icon">🛡️</div><h3>Build trust</h3><p>Every mechanic is verified — Bronze, Silver or Gold tier. Real reviews, real photos, real shop addresses.</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>Get the repair</h3><p>Direct WhatsApp and phone contact with your mechanic. No middleman, no commission, no extra wahala.</p></div>
+      <div class="card"><div class="icon">✅</div><h3>Accountability after the job</h3><p>Workmanship warranty on every Gold-tier booking. If something goes wrong, we help escalate — free.</p></div>
+      <div class="card"><div class="icon">🚨</div><h3>Roadside Rescue 24/7</h3><p>Battery jump, towing, on-the-spot fixes. Hit the rescue hotline and we sort you out, anywhere in Nigeria.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#050507;border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line)">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">1,240+</div><div class="l">Mechanics</div></div>
+      <div class="stat"><div class="n">36</div><div class="l">States + FCT</div></div>
+      <div class="stat"><div class="n">12,500+</div><div class="l">Jobs Done</div></div>
+      <div class="stat"><div class="n">14 min</div><div class="l">Avg Response</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:48px;align-items:center">
+      <div class="hero-img" style="height:420px">
+        <img src="https://www.genspark.ai/api/files/s/eslIjhb8?cache_control=3600" alt="Busy Lagos street with mechanic workshops — Mec Find serves every Nigerian city">
+      </div>
+      <div>
+        <span class="kicker">The Problem We Exist to Solve</span>
+        <h2>Every day, <span class="red">Nigerians lose time, money and trust</span> on the wrong mechanic.</h2>
+        <p style="color:#cdd0d6;margin-top:14px">It's carnival Saturday and your alternator dies. You push your car to the nearest roadside "mechanic" — who fits a fake, charges you ₦45,000, and it fails on your way back. We asked ourselves: <em>why is this still happening?</em> The answer became Mech Find.</p>
+        <a class="btn btn-red" style="margin-top:24px" href="problem.html">Read the full story →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Why it works</span>
+      <h2>Built by 10 Nigerians. <span class="red">For Nigeria.</span></h2>
+      <p class="lede">Viewport Pod + Webbo3 Academy — one team, different perspectives, one problem.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="icon">📍</div><h3>Distance matters</h3><p>If your car won't start in Lekki, we don't show you a mechanic in Kano. 1km–20km intelligent radius search.</p></div>
+      <div class="card"><div class="icon">⭐</div><h3>Verified, not claimed</h3><p>Gold-tier mechanics are shop-visited. We see their work. We test their claim. We recheck yearly.</p></div>
+      <div class="card"><div class="icon">💬</div><h3>Nigerian-friendly</h3><p>WhatsApp first. Pidgin welcome. Phone calls quick-sharp. No corporate email wahala.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rescue">
+      <div>
+        <h3 style="color:#fff;margin-bottom:4px">🚨 Roadside Rescue Hotline · 24/7</h3>
+        <p style="opacity:.92">Battery jump · Towing · On-the-spot minor repairs. We come to you anywhere in Lagos and Abuja.</p>
+      </div>
+      <a class="btn btn-ghost" href="contact.html" style="background:#fff;color:#80060C;border:none">Call Now →</a>
+    </div>
+  </div>
+</section>
+</section>
+<section class="page page-problem" data-page="problem">
+<div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="hero-kicker">Why we built Mech Find</span>
+    <h1>The <span class="red">Problem</span></h1>
+    <div class="hero-tagline">WHO IS AFFECTED. WHAT IT COSTS. WHY NOTHING HAS BEEN ENOUGH.</div>
+    <p class="lede">Every great project starts with a real question. Ours was simple: finding the wrong mechanic shouldn't be a Nigerian rite of passage. So we asked the four questions and refused to stop until we had a serious answer.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Our framework</span>
+      <h2>Four questions <span class="red">honest answers</span> built this.</h2>
+    </div>
+    <div class="problem-q"><div class="num">01</div><div><h3>Who is affected?</h3><p>Every Nigerian driver of an imported or locally-assembled car. From the danfo driver whose Hiace breaks down mid-route, to the lawyer whose Lexus develops an electrical gremlin, to the trader whose Honda Accord alternator dies weeks after a "repair." That's roughly <strong style="color:#fff">22 million vehicles</strong> on Nigerian roads, with a vehicle-to-licensed-mechanic ratio estimated at 180:1.</p></div></div>
+    <div class="problem-q"><div class="num">02</div><div><h3>What does it cost them?</h3><p>It costs them <strong style="color:#fff">twice</strong>. They pay once for a wrong repair (₦25,000–₦180,000 typical), then again for the correct one. They lose <strong style="color:#fff">days of mobility</strong> — work, school runs, business deliveries. Trusted industry estimates suggest Nigerian households absorb <strong style="color:#fff">roughly ₦450 billion/year</strong> in avoidable car repair costs due to misdiagnosis, fake parts and repeat failures.</p></div></div>
+    <div class="problem-q"><div class="num">03</div><div><h3>What already exists?</h3><p>Roadside mechanics. Town mechanics. Specialist workshops. Government-approved garages. Foreign car-brand authorised service centres. WhatsApp groups full of "my guy" referrals. National automotive council listings. They exist — but none connect car owners to the <em>right specialist</em> for a specific fault within a specific distance within a specific budget.</p></div></div>
+    <div class="problem-q"><div class="num">04</div><div><h3>Why is it still not enough?</h3><p>Because there is no <strong style="color:#fff">trust signal beyond word of mouth</strong>. No system where you can see the mechanic's verified skills, their past work, their distances, their availability — and reach them in one click. Until now.</p></div></div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Real Nigerian scenarios</span>
+      <h2>Stories behind <span class="red">the numbers</span>.</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card"><div class="icon">🌉</div><h3>"I died on Third Mainland Bridge"</h3><p>Bosede, Lekki → Victoria Island. Honda Accord, 2014. Alternator warning flickered, then died mid-bridge at 7:14am. Towing? ₦60,000. Her regular "mechanic" didn't return calls. Two hours in traffic. Lost a ₦25,000 client meeting.</p></div>
+      <div class="card"><div class="icon">⚡</div><h3>The Fake Spark Plug era</h3><p>Kabiru, Kano. Bought "original NGK" plugs at ₦4,500 each from a roadside vendor. Two weeks later, misfiring got worse — mechanic showed him they're fake NGK, sold at 70% markup across Northern Nigeria.</p></div>
+      <div class="card"><div class="icon">❄️</div><h3>AC Compressor saga</h3><p>Tunde, Abuja. Paid ₦150,000 for a "rebuilt" AC compressor. Failed after 6 weeks. Second mechanic quoted ₦210,000 for a real one. Lost ₦150,000 plus 3 weeks of hot-sob commuting.</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>"My guy no dey answer"</h3><p>Chinwe, PH. Maxima gearbox issue. Her "my guy" referred her to another "my guy", who referred her to a third. Three weeks of phone tag, no repair.</p></div>
+      <div class="card"><div class="icon">🛣️</div><h3>Roadside Rescue gap</h3><p>Ibrahim, Ibadan. Car died at 9pm. Yaba-style "mechanics" quoted ₦80,000+ on the spot. None took card. None wrote receipt. None had a shop address.</p></div>
+      <div class="card"><div class="icon">🪙</div><h3>The repeat failure cost</h3><p>Aisha, Abuja. Brazilian-made Toyota Corolla. Paid ₦65,000 for what was diagnosed as a transmission issue. Turned out: ignition coil. Wrong diagnosis wasted her time and her money — twice.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rescue">
+      <div>
+        <h3 style="color:#fff;margin-bottom:4px">Stop losing money to wrong diagnoses.</h3>
+        <p style="opacity:.92">Mech Find matches you with mechanics who actually know your car, your fault, your location.</p>
+      </div>
+      <a class="btn btn-ghost" href="find.html" style="background:#fff;color:#80060C;border:none">Find a Mechanic →</a>
+    </div>
+  </div>
+</section>
+</section>
+<section class="page page-how" data-page="how">
+<div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="hero-kicker">From breakdown to driving again</span>
+    <h1>How <span class="red">Mech Find</span> Works</h1>
+    <div class="hero-tagline">SEARCH → VIEW PROFILE → CONTACT → COMPLETED JOB.</div>
+    <p class="lede">Four steps. Less than 15 minutes from "my car just died" to a verified mechanic who's already seen a job like yours this week.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">The Four Steps</span>
+      <h2>Designed for Nigerians. <span class="red">Built for panic moments.</span></h2>
+    </div>
+    <div class="grid grid-3 steps">
+      <div class="step"><h3>1. Search</h3><p>Tell us your car make, fault, and location. Our filter matches you with verified mechanics nearby. Mobile-friendly, no signup required.</p></div>
+      <div class="step"><h3>2. View Profile</h3><p>See skills, car makes serviced, distance, verification tier, ratings, real reviews, and indicative pricing in Naira before you call.</p></div>
+      <div class="step"><h3>3. Contact</h3><p>Tap to call or WhatsApp. Negotiate scope and price. Pay deposit by bank transfer / POS / cash. Mechanic arrives or you drive in.</p></div>
+      <div class="step"><h3>4. Completed Job</h3><p>Workmanship warranty on Gold-tier bookings. Leave a review. We hold the mechanics accountable so the next person benefits from your feedback.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Visualised</span>
+      <h2>Your four-step journey <span class="red">at a glance</span>.</h2>
+    </div>
+    <img src="https://www.genspark.ai/api/files/s/0Qu8WdvD?cache_control=3600" alt="Mech Find's four-step process diagram — search, view, contact, complete" style="border-radius:var(--radius-lg);width:100%;border:1px solid var(--c-line)">
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:48px;align-items:center">
+      <div>
+        <span class="kicker">What you always see</span>
+        <h2>Every mechanic profile <span class="red">answers the same six questions</span>.</h2>
+        <ul style="margin-top:18px;list-style:none">
+          <li style="margin-bottom:14px"><strong style="color:#fff">1. What skills do you have?</strong><br><span style="color:var(--c-mute)">e.g. engine, transmission, electrical, AC, brakes, suspension, bodywork.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">2. What car makes do you service?</strong><br><span style="color:var(--c-mute)">Toyota, Honda, Lexus, Mercedes, Hyundai, Kia, Nissan, VW, Peugeot, Mitsubishi, Ford, Land Rover, Suzuki.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">3. How far are you?</strong><br><span style="color:var(--c-mute)">Real-time distance from the car owner's location.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">4. Are you verified?</strong><br><span style="color:var(--c-mute)">Bronze · Silver · Gold tier badge on every profile.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">5. What do you charge?</strong><br><span style="color:var(--c-mute)">Indicative Naira (₦) ranges visible before contact.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">6. When are you available?</strong><br><span style="color:var(--c-mute)">Calendar view so you don't lose time on phone tag.</span></li>
+        </ul>
+      </div>
+      <div class="hero-img" style="height:480px">
+        <img src="https://www.genspark.ai/api/files/s/UQZAl6w0?cache_control=3600" alt="Hands installing a clean car battery — Mech Find-level workmanship">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Payment</span>
+      <h2>How you <span class="red">pay</span> — your choice, Nigerian-friendly.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="icon">🏦</div><h3>Bank Transfer</h3><p>Pay to the mechanic's verified business account. Receipt issued. Mismatch claims are easier to escalate.</p></div>
+      <div class="card"><div class="icon">💳</div><h3>POS / Card</h3><p>Most Gold-tier mechanics carry POS. Pay on delivery of car — no cash risk carrying big amounts home.</p></div>
+      <div class="card"><div class="icon">💵</div><h3>Cash on Delivery</h3><p>Inspect the work, then pay. Standard for small jobs under ₦50,000. Always request a written receipt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rescue">
+      <div>
+        <h3 style="color:#fff;margin-bottom:4px">Ready to use Mech Find?</h3>
+        <p style="opacity:.92">Search verified mechanics near you, right now — no signup needed.</p>
+      </div>
+      <a class="btn btn-ghost" href="find.html" style="background:#fff;color:#80060C;border:none">Find a Mechanic →</a>
+    </div>
+  </div>
+</section>
+</section>
+<section class="page page-find" data-page="find">
+<div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="hero-kicker">Step 1 · Search</span>
+    <h1>Find your <span class="red">mechanic</span>.</h1>
+    <div class="hero-tagline">WE FIND. YOU DRIVE.</div>
+    <p class="lede">Search verified mechanics near you, by car make, fault, distance and budget. Filter live — no signup, no email gate.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="search-panel">
+      <div class="search-row">
+        <div class="field"><label>Car Make</label>
+          <select id="f-make">
+            <option value="">Any make</option>
+            <option>Toyota</option><option>Honda</option><option>Lexus</option>
+            <option>Mercedes-Benz</option><option>Hyundai</option><option>Kia</option>
+            <option>Nissan</option><option>Volkswagen</option><option>Peugeot</option>
+            <option>Mitsubishi</option><option>Ford</option><option>Land Rover</option><option>Suzuki</option>
+          </select>
+        </div>
+        <div class="field"><label>State</label>
+          <select id="f-state">
+            <option value="">All states</option>
+            <option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option><option>Anambra</option>
+            <option>Bauchi</option><option>Bayelsa</option><option>Benue</option><option>Borno</option>
+            <option>Cross River</option><option>Delta</option><option>Ebonyi</option><option>Edo</option>
+            <option>Ekiti</option><option>Enugu</option><option>FCT ( Abuja )</option><option>Gombe</option>
+            <option>Imo</option><option>Jigawa</option><option>Kaduna</option><option>Kano</option>
+            <option>Katsina</option><option>Kebbi</option><option>Kogi</option><option>Kwara</option>
+            <option>Lagos</option><option>Nasarawa</option><option>Niger</option><option>Ogun</option>
+            <option>Ondo</option><option>Osun</option><option>Oyo</option><option>Plateau</option>
+            <option>Rivers</option><option>Sokoto</option><option>Taraba</option><option>Yobe</option><option>Zamfara</option>
+          </select>
+        </div>
+        <div class="field"><label>Service Type</label>
+          <select id="f-spec">
+            <option value="">Any service</option>
+            <option>Engine</option><option>Transmission</option><option>Brakes</option>
+            <option>Electrical</option><option>AC/Climate</option><option>Suspension</option>
+            <option>Bodywork</option><option>Diagnostics</option><option>Roadside Rescue</option>
+            <option>Oil Change</option><option>Tire</option><option>Battery</option>
+          </select>
+        </div>
+        <div class="field"><label>Search name / city</label>
+          <input id="f-q" placeholder="e.g. Yaba, Chukwuemeka, alternator">
+        </div>
+      </div>
+      <div class="search-row" style="align-items:end">
+        <div class="field" style="grid-column:1/-1">
+          <label>Distance radius — <span class="range-val" id="dist-val">20 km</span></label>
+          <input id="dist-range" type="range" min="1" max="50" value="20" style="width:100%;accent-color:var(--c-red)">
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:14px;align-items:center">
+        <button class="btn btn-red" id="apply-btn" onclick="filterMechanics()">Apply Filters</button>
+        <button class="btn btn-ghost" id="reset-btn">Reset</button>
+        <div style="margin-left:auto;color:var(--c-mute);font-size:.9rem">Showing <strong style="color:#fff" id="result-count">0</strong> mechanics</div>
+      </div>
+    </div>
+
+    <div class="results" id="result-list" style="margin-top:32px"></div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Can't find one?</span>
+      <h2>Tell us what you need. <span class="red">We source a mechanic for you.</span></h2>
+      <p class="lede">For uncommon car makes, rare parts, or remote locations — fill the request form and we'll WhatsApp you a match within 60 minutes.</p>
+    </div>
+    <a class="btn btn-red" href="request.html">Request a Mechanic →</a>
+  </div>
+</section>
+</section>
+<section class="page page-mechanic" data-page="mechanic">
+<div class="wrap">
+    <span class="kicker">Mechanic Profile · Verified listings</span>
+    <h2>Detail <span class="red">page</span></h2>
+    <p class="lede">Every profile shows the same six things: skills, makes serviced, distance, verification, pricing and availability. No surprises.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="detail-hero" id="mech-detail"></div>
+    <div id="reviews" style="margin-top:48px"></div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="rescue">
+      <div>
+        <h3 style="color:#fff;margin-bottom:4px">🚨 Emergency? This mechanic can't help right now?</h3>
+        <p style="opacity:.92">Hit our 24/7 roadside rescue hotline and we will sort you out.</p>
+      </div>
+      <a class="btn btn-ghost" href="contact.html" style="background:#fff;color:#80060C;border:none">Call Rescue →</a>
+    </div>
+  </div>
+</section>
+</section>
+<section class="page page-trust" data-page="trust">
+<div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="hero-kicker">Trust is the whole point</span>
+    <h1>Trust &amp; <span class="red">Verification</span></h1>
+    <div class="hero-tagline">WE DON'T JUST LIST MECHANICS. WE VERIFY THEM.</div>
+    <p class="lede">A badge you can see, a tier you can trust, a Nigerian-specific verification system designed by Testimony Onilede and the Viewport Pod after interviewing 47 mechanics across 6 cities.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Three Tiers · One Standard Up</span>
+      <h2>The <span class="red">Bronze · Silver · Gold</span> system.</h2>
+      <p class="lede">Each tier is earned, not bought. We recheck every mechanic annually. Badges can be revoked.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="tier">
+        <span class="ribbon"><span class="badge b-bronze">Bronze</span></span>
+        <h3>Baseline trust</h3>
+        <p style="color:var(--c-mute);margin-top:10px">National ID + 1 customer reference + phone verification.</p>
+        <ul><li>National ID or Voter's Card</li><li>One verified customer reference</li><li>Phone number confirmed</li><li>Shop address on file</li><li>Visible on map search</li></ul>
+      </div>
+      <div class="tier">
+        <span class="ribbon"><span class="badge b-silver">✔ Silver</span></span>
+        <h3>Proven skill</h3>
+        <p style="color:var(--c-mute);margin-top:10px">At least 2 references + skill test from a senior mechanic.</p>
+        <ul><li>2+ customer references confirmed</li><li>Skill test observation by senior mechanic</li><li>Pricing discipline check (no fake MSRP markups)</li><li>Practical diagnostic demonstration</li><li>Eligible for dispute escalation</li></ul>
+      </div>
+      <div class="tier">
+        <span class="ribbon"><span class="badge b-gold">★ Gold</span></span>
+        <h3>Top of the pack</h3>
+        <p style="color:var(--c-mute);margin-top:10px">Certifications + physical shop visit + workmanship warranty.</p>
+        <ul><li>Recognised trade certification</li><li>In-person shop visit by Mech Find</li><li>Workmanship warranty backed by us</li><li>Original / OEM parts sourcing</li><li>Gold-only roadside rescue partner eligibility</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">What customers say</span>
+      <h2>Real reviews. <span class="red">Real Nigerian stories.</span></h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card"><div style="color:#FFD700;margin-bottom:8px">★★★★★</div><p>"I used to pay ₦45,000 for a fake NGK plug at every roadside workshop. Mech Find connected me to Chukwuemeka in Yaba — same plug, original NGK, ₦2,800. My car runs sweeter now."</p><div style="margin-top:14px;color:var(--c-silver);font-weight:600">— Funke B., Lagos</div></div>
+      <div class="card"><div style="color:#FFD700;margin-bottom:8px">★★★★★</div><p>"Aisha diagnosed an electrical fault in 30 minutes. Two other people charged me ₦120,000 and failed. She sorted it for ₦38,000. No more wahala."</p><div style="margin-top:14px;color:var(--c-silver);font-weight:600">— Tunde O., Abuja</div></div>
+      <div class="card"><div style="color:#FFD700;margin-bottom:8px">★★★★★</div><p>"Roadside rescue from Emeka in PH — battery died at 11pm. He came in 14 minutes. Cash paid, receipt in hand. Genuine Gold mechanic behaviour."</p><div style="margin-top:14px;color:var(--c-silver);font-weight:600">— Godwin E., Rivers</div></div>
+      <div class="card"><div style="color:#FFD700;margin-bottom:8px">★★★★☆</div><p>"Olumide's suspension work on my Honda Pilot was fair and clean. Will rate 5 stars after my next long-distance trip, but so far — solid."</p><div style="margin-top:14px;color:var(--c-silver);font-weight:600">— Yetunde A., Ikeja</div></div>
+      <div class="card"><div style="color:#FFD700;margin-bottom:8px">★★★★★</div><p>"Ibrahim restored my Peugeot 405 engine like he just brought it back from the dead. That car was off-road 8 months. Now she roar."</p><div style="margin-top:14px;color:var(--c-silver);font-weight:600">— Bashir M., Kano</div></div>
+      <div class="card"><div style="color:#FFD700;margin-bottom:8px">★★★★★</div><p>"Funmilayo dey repaint my old Camry. Sharp-sharp. Receipt. Photos. Cash or POS. The way Nigeria mechanics suppose to be."</p><div style="margin-top:14px;color:var(--c-silver);font-weight:600">— Seun D., Ibadan</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">If something goes wrong</span>
+      <h2>Complaint <span class="red">escalation path</span>.</h2>
+      <p class="lede">Mech Find never goes silent. If a problem isn't resolved with the mechanic directly, we step in — for free.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="icon">1️⃣</div><h3>Speak to mechanic</h3><p>Open communication is fastest. Mention the booking reference from your Mech Find receipt.</p></div>
+      <div class="card"><div class="icon">2️⃣</div><h3>WhatsApp us</h3><p>Send photos, video, and the receipt to our dedicated escalation line. <strong>+234 800 000 0001</strong>.</p></div>
+      <div class="card"><div class="icon">3️⃣</div><h3>Mech Find mediates</h3><p>We organise a senior mechanic inspection, propose cost coverage, and document outcome. Free for Gold tier customers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="rescue">
+      <div>
+        <h3 style="color:#fff;margin-bottom:4px">🛡️ Trust broken? Tell us. Quickly.</h3>
+        <p style="opacity:.92">A bad mechanic on our platform is everyone's problem. We move fast.</p>
+      </div>
+      <a class="btn btn-whats" href="https://wa.me/2348000000001?text=Reporting%20Mech%20Find%20escalation%20-%20please%20help">Escalate Now →</a>
+    </div>
+  </div>
+</section>
+</section>
+<section class="page page-request" data-page="request">
+<div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="hero-kicker">Two paths · One platform</span>
+    <h1>Get <span class="red">Started</span></h1>
+    <div class="hero-tagline">NEED A MECHANIC? JOIN AS A MECHANIC?</div>
+    <p class="lede">Tell us your car problem or sign yourself up as a verified mechanic. Both sides of the platform are welcome here — designed by Ajewole Israel.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tabs-wrap">
+      <div class="tabs">
+        <button class="act">🔧 I need a mechanic</button>
+        <button>👨‍🔧 I am a mechanic</button>
+      </div>
+
+      <div class="act">
+        <div class="card" style="margin-bottom:24px">
+          <h3>Tell us what's wrong. We sort you out.</h3>
+          <p style="color:var(--c-mute);margin-bottom:18px">Free request · Response in 60 minutes · No payment upfront</p>
+          <form class="mock">
+            <div class="form-grid">
+              <div class="field"><label>Full name</label><input required placeholder="e.g. Chinwe Okeke"></div>
+              <div class="field"><label>Phone</label><input required placeholder="+234 800 000 0000"></div>
+              <div class="field"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+              <div class="field"><label>City / LGA</label>
+                <select required>
+                  <option value="">Select LGA</option><option>Ikeja</option><option>Lekki</option><option>Yaba</option>
+                  <option>Surulere</option><option>Mushin</option><option>VI</option><option>Abuja-Wuse</option>
+                  <option>Garki</option><option>GRA PH</option><option>Old GRA</option><option>Bodija</option>
+                  <option>Nasarawa-Kano</option>
+                </select>
+              </div>
+              <div class="field"><label>Car make</label>
+                <select required>
+                  <option value="">Select make</option><option>Toyota</option><option>Honda</option><option>Lexus</option>
+                  <option>Mercedes-Benz</option><option>Hyundai</option><option>Kia</option><option>Nissan</option>
+                  <option>Volkswagen</option><option>Peugeot</option><option>Mitsubishi</option>
+                </select>
+              </div>
+              <div class="field"><label>Car model / year</label><input required placeholder="Corolla 2016"></div>
+              <div class="field full"><label>Fault description</label><textarea required placeholder="Car won't start at morning. Dashboard flickers. Possible alternator. Parked in Lekki Phase 1."></textarea></div>
+              <div class="field full"><label>Upload photo of fault (optional)</label><input type="file" accept="image/*"></div>
+            </div>
+            <div style="margin-top:24px;display:flex;gap:12px">
+              <button class="btn btn-red" type="submit">Submit Request</button>
+              <button class="btn btn-whats" type="button" onclick="window.location='https://wa.me/2348000000000?text=I%20need%20a%20mechanic%20on%20Mech%20Find.'">WhatsApp Instead</button>
+            </div>
+          </form>
+        </div>
+        <div class="success">
+          <div class="check">✓</div>
+          <h3 style="color:#fff">Request received. We go sort you out.</h3>
+          <p style="color:var(--c-mute);margin-top:8px">A Mech Find agent will WhatsApp you within 60 minutes with up to 3 verified mechanics near your location. Reference ID: <strong style="color:#fff">MFD-2026-XXXX</strong>. No payment upfront.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:24px">
+          <h3>Join the Mech Find mechanic network.</h3>
+          <p style="color:var(--c-mute);margin-bottom:18px">Free onboarding · ₹0 monthly fee · You only pay a small 5% commission on completed jobs (capped at ₦5,000)</p>
+          <form class="mock">
+            <div class="form-grid">
+              <div class="field"><label>Full name</label><input required placeholder="e.g. Emeka Nwosu"></div>
+              <div class="field"><label>Phone (WhatsApp)</label><input required placeholder="+234 800 000 0000"></div>
+              <div class="field"><label>Email</label><input type="email" required placeholder="emekanwosu@email.com"></div>
+              <div class="field"><label>NIN / National ID number</label><input required placeholder="01234567890"></div>
+              <div class="field"><label>Workshop / shop name</label><input required placeholder="Nwozzy Auto Services"></div>
+              <div class="field"><label>City / LGA</label>
+                <select required>
+                  <option value="">Select</option><option>Ikeja</option><option>Yaba</option><option>Surulere</option>
+                  <option>Abuja-Garki</option><option>Abuja-Wuse</option><option>GRA PH</option>
+                  <option>Bodija Ibadan</option><option>Kano-Nasarawa</option>
+                </select>
+              </div>
+              <div class="field full"><label>Skills (multi-select)</label>
+                <select multiple required style="height:120px">
+                  <option>Engine</option><option>Transmission</option><option>Brakes</option>
+                  <option>Electrical</option><option>AC/Climate</option><option>Suspension</option>
+                  <option>Bodywork</option><option>Diagnostics</option><option>Roadside Rescue</option>
+                  <option>Oil Change</option><option>Tire</option><option>Battery</option>
+                </select>
+              </div>
+              <div class="field full"><label>Car makes you service</label>
+                <select multiple required style="height:120px">
+                  <option>Toyota</option><option>Honda</option><option>Lexus</option><option>Mercedes-Benz</option>
+                  <option>Hyundai</option><option>Kia</option><option>Nissan</option><option>Volkswagen</option>
+                  <option>Peugeot</option><option>Mitsubishi</option><option>Ford</option><option>Land Rover</option>
+                  <option>Suzuki</option>
+                </select>
+              </div>
+              <div class="field full"><label>Years of experience</label>
+                <select required>
+                  <option>0-2 years</option><option>2-5 years</option><option>5-10 years</option>
+                  <option>10-20 years</option><option>20+ years</option>
+                </select>
+              </div>
+              <div class="field full"><label>Certifications (optional)</label><textarea placeholder="National automotive council, brand certifications, training..."></textarea></div>
+            </div>
+            <div style="margin-top:24px;display:flex;gap:12px">
+              <button class="btn btn-red" type="submit">Apply to Join</button>
+            </div>
+          </form>
+        </div>
+        <div class="success">
+          <div class="check">✓</div>
+          <h3 style="color:#fff">Application received. Welcome to the network.</h3>
+          <p style="color:var(--c-mute);margin-top:8px">A Mech Find verification agent will WhatsApp you within 48 hours to begin Bronze tier verification.<br>Application reference: <strong style="color:#fff">MECH-APP-2026-XXXX</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<section class="page page-guide" data-page="guide">
+<div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="hero-kicker">Education first</span>
+    <h1>Guide &amp; <span class="red">FAQ</span></h1>
+    <div class="hero-tagline">KNOW MORE, LOSE LESS.</div>
+    <p class="lede">Curated by Ede Comfort Salome — answers to the questions Nigerian car owners actually ask, in Naira, in Nigerian English, with no fluff.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Pricing questions · asked daily</span>
+      <h2><span class="red">Pricing</span> in Nigeria today.</h2>
+    </div>
+    <div>
+      <div class="faq-item open"><div class="faq-q">How much does alternator replacement cost in Lagos?</div><div class="faq-a">A genuine Toyota / Honda alternator: ₦45,000–₦85,000 for the part + ₦8,000–₦15,000 labour. Total ₦53,000–₦100,000. If a quote is below ₦35,000 with "original part" — wahala, ask for the part number.</div></div>
+      <div class="faq-item"><div class="faq-q">How much is full AC service in 2026?</div><div class="faq-a">Gas refill alone: ₦15,000–₦25,000. Compressor replacement + re-gassing: ₦120,000–₦220,000 depending on make. Avoid roadside "recharging" — it usually fails in weeks.</div></div>
+      <div class="faq-item"><div class="faq-q">Transmission overhaul — what should I expect to pay?</div><div class="faq-a">₦180,000–₦420,000 for full overhaul + parts (Toyota/Lexus). Honda: ₦150,000–₦300,000. Always insist on a senior mechanic for this work.</div></div>
+      <div class="faq-item"><div class="faq-q">How much for paint / bodywork on a sedan?</div><div class="faq-a">Panel beating: ₦25,000 per panel. Full repaint: ₦180,000–₦320,000. Metallic paint extra. Always ask for before/after photos.</div></div>
+      <div class="faq-item"><div class="faq-q">Roadside rescue — how much?</div><div class="faq-a">Within Lagos: ₦5,000–₦15,000 for battery jump or on-the-spot fix. Towing: ₦30,000–₦80,000 depending on distance. Abuja pricing similar.</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Payments</span>
+      <h2>How you <span class="red">pay</span> — three ways.</h2>
+    </div>
+    <div class="faq-item open"><div class="faq-q">Can I pay cash on delivery of my car?</div><div class="faq-a">Yes. After the work is done and you've inspected it. Always ask for a written receipt — even for cash.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I pay by bank transfer or POS?</div><div class="faq-a">Most Gold and Silver mechanics accept both. Bank transfers must go to the mechanic's business account — never a personal account for amounts above ₦50,000.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you (Mech Find) take payment?</div><div class="faq-a">No — for now, you pay the mechanic directly. Mech Find only charges a 5% commission to the mechanic (capped at ₦5,000) for Gold-tier jobs sourced through us.</div></div>
+    <div class="faq-item"><div class="faq-q">What if my mechanic insists on cash only?</div><div class="faq-a">Bronze-tier mechanics often do. We mark them clearly. Silver and Gold generally offer choice. If still uncomfortable, find another mechanic via the platform.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Warranty</span>
+      <h2>What happens <span class="red">after</span> the job is done.</h2>
+    </div>
+    <div class="faq-item open"><div class="faq-q">What's the warranty on a Mechanic Find job?</div><div class="faq-a">Gold-tier mechanics: 30 days workmanship warranty backed by us. Silver-tier: 14 days, mechanic-backed. Bronze-tier: by arrangement, usually none.</div></div>
+    <div class="faq-item"><div class="faq-q">My car broke down again 5 days after repair. Now what?</div><div class="faq-a">Contact the mechanic first. If unresolved, WhatsApp our escalation line (+234 800 000 0001). For Gold-tier jobs, we'll organise a free senior inspection.</div></div>
+    <div class="faq-item"><div class="faq-q">What counts as workmanship vs. part failure?</div><div class="faq-a">If the part fails without use (e.g. alternator within 30 days), it's warranty. If you drove the car on bad roads and damaged it, that's wear and tear — your cost.</div></div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Emergencies</span>
+      <h2>What to do <span class="red">right now</span>.</h2>
+    </div>
+    <div class="faq-item open"><div class="faq-q">My car won't start and I'm on the road. Help!</div><div class="faq-a">Step 1: Push to a safe spot. Step 2: Hit the rescue hotline +234 800 000 0000 (24/7). Step 3: Use "Roadside Rescue" filter on Find a Mechanic page.</div></div>
+    <div class="faq-item"><div class="faq-q">I had an accident. What should I do before choosing a mechanic?</div><div class="faq-a">Take photos of the scene. Get a police report if there are injuries or significant damage. Then contact your insurance. Avoid the first "mechanic" who shows up quoting.</div></div>
+    <div class="faq-item"><div class="faq-q">Fuel pump failure mid-journey — first actions?</div><div class="faq-a">Switch to reserve if possible. Pull over safely. Call roadside rescue. Don't accept towing pricing above ₦100,000 without comparison.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rescue">
+      <div>
+        <h3 style="color:#fff;margin-bottom:4px">Still have a question?</h3>
+        <p style="opacity:.92">WhatsApp us or email hello@mechfind.ng — we reply within 4 working hours.</p>
+      </div>
+      <a class="btn btn-whats" href="https://wa.me/2348000000000?text=Hi%20Mech%20Find%2C%20I%20have%20a%20question">Ask Us →</a>
+    </div>
+  </div>
+</section>
+</section>
+<section class="page page-pod" data-page="pod">
+<div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="hero-kicker">Ten people. One pod. One problem.</span>
+    <h1>The <span class="red">Pod</span></h1>
+    <div class="hero-tagline">ONE TEAM. DIFFERENT PERSPECTIVES. ONE PROBLEM.</div>
+    <p class="lede">Viewport Pod — Webbo3 Academy cohort. Day 1 we had no idea. By Day 7 we had MECH FIND. Today we hand it to you.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap" style="text-align:center;max-width:780px">
+    <span class="kicker" style="display:block;margin:0 auto 14px">Our Story</span>
+    <h2>Every great project starts somewhere.</h2>
+    <p class="lede" style="margin:18px auto 0;max-width:680px">Ours started with ten people, different ideas, a lot of questions, and one simple challenge: <em>What real problem can we solve?</em> We didn't start with a perfect idea. We started by talking. Sharing. Questioning. Challenging each other's thoughts. And somewhere between all those conversations, we started looking at problems people experience in their everyday lives.</p>
+    <p class="lede" style="margin:18px auto 0;max-width:680px">One problem stood out. Finding the right mechanic when your car develops a fault. At first, it sounded simple — there are mechanics everywhere, so why should finding one be difficult? The more we asked "who is affected?", "what does it cost?", "what already exists?", "why isn't it enough?" — the more we realised the gap is real, deep, and worth solving.</p>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;max-width:none">
+      <span class="kicker">Meet the team</span>
+      <h2 style="margin:0 auto;max-width:none">Ten hands. <span class="red">One build.</span></h2>
+    </div>
+    <div class="team">
+      <div class="member"><div class="pic">OO</div><div style="font-weight:600;color:#fff">Oluwaferanmi Oladapo</div><div class="role">LandING PAGE</div></div>
+      <div class="member"><div class="pic">HY</div><div style="font-weight:600;color:#fff">Haibah Yusuff</div><div class="role">The Problem PAGE</div></div>
+      <div class="member"><div class="pic">AH</div><div style="font-weight:600;color:#fff">Akinku Hephzibah</div><div class="role">How IT WORKS</div></div>
+      <div class="member"><div class="pic">OO</div><div style="font-weight:600;color:#fff">Oladimeji Olatomiwa</div><div class="role">Main Working PAGE</div></div>
+      <div class="member"><div class="pic">OE</div><div style="font-weight:600;color:#fff">Ojo Oluwasemilogo Emmanuel</div><div class="role">Detail PAGE</div></div>
+      <div class="member"><div class="pic">TO</div><div style="font-weight:600;color:#fff">Testimony Onilede</div><div class="role">Trust &amp; Verification</div></div>
+      <div class="member"><div class="pic">AI</div><div style="font-weight:600;color:#fff">Ajewole Israel</div><div class="role">Request / Get Started</div></div>
+      <div class="member"><div class="pic">EC</div><div style="font-weight:600;color:#fff">Ede Comfort Salome</div><div class="role">Guide &amp; FAQ</div></div>
+      <div class="member"><div class="pic">AB</div><div style="font-weight:600;color:#fff">Aishat Bolanle Akinade</div><div class="role">The Pod PAGE</div></div>
+      <div class="member"><div class="pic">IV</div><div style="font-weight:600;color:#fff">Iwegbu Victor</div><div class="role">Contact &amp; Site Shell</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:48px;align-items:center">
+      <div class="hero-img" style="height:420px">
+        <img src="https://www.genspark.ai/api/files/s/UQZAl6w0?cache_control=3600" alt="Mechanic hands finishing a clean repair — symbol of the precision our team chased">
+      </div>
+      <div>
+        <span class="kicker">Our values</span>
+        <h2>What we <span class="red">refuse</span> to compromise.</h2>
+        <ul style="margin-top:18px;list-style:none">
+          <li style="margin-bottom:14px"><strong style="color:#fff">🛡️ Trust first.</strong><br><span style="color:var(--c-mute)">Every badge, every review, every price is verified. Fakes are out.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">🇳🇬 Local tone.</strong><br><span style="color:var(--c-mute)">Pidgin welcome. Pidgin encouraged. We're Nigerians, building for Nigerians.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">💸 No hidden fees.</strong><br><span style="color:var(--c-mute)">You pay the mechanic direct. We charge the mechanic, not you.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">🤝 Accountability.</strong><br><span style="color:var(--c-mute)">If something goes wrong, we mediate. The trust signal is the platform, not just the profile.</span></li>
+          <li style="margin-bottom:14px"><strong style="color:#fff">⚡ Speed.</strong><br><span style="color:var(--c-mute)">A car breakdown is urgent. 60-minute response, 14-minute avg rescue.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="rescue">
+      <div>
+        <h3 style="color:#fff;margin-bottom:4px">Built by 10. Supported by you.</h3>
+        <p style="opacity:.92">If MECH FIND helps you, share it with one Nigerian who dreads the next car repair.</p>
+      </div>
+      <a class="btn btn-whats" href="https://wa.me/2348000000000?text=I%20love%20Mech%20Find%21">Tell a Friend →</a>
+    </div>
+  </div>
+</section>
+</section>
+<section class="page page-contact" data-page="contact">
+<div class="wrap">
+    <span class="hero-kicker">All channels open · 24/7 rescue</span>
+    <h1 style="font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,4rem);background:linear-gradient(180deg,#fff 0%,#8a8d96 100%);-webkit-background-clip:text;background-clip:text;color:transparent">Contact <span style="background:linear-gradient(180deg,#ff2a37,#fff);-webkit-background-clip:text;background-clip:text;color:transparent">Mech Find</span></h1>
+    <div class="hero-tagline">PHONE · WHATSAPP · EMAIL · CONTACT FORM.</div>
+    <p class="lede">Site shell, contact form and rescue hotline — designed by Iwegbu Victor. Pick whichever channel fits your urgency.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="grid grid-3">
+      <div class="card"><div class="icon">📞</div><h3>Phone</h3><p><a href="tel:+2348000000000" style="color:#fff;font-weight:600">+234 800 000 0000</a><br><span style="color:var(--c-mute)">Reception · Mon–Sat 8am–8pm</span></p></div>
+      <div class="card"><div class="icon">🟢</div><h3>WhatsApp</h3><p><a href="https://wa.me/2348000000000" style="color:#fff;font-weight:600">+234 800 000 0000</a><br><span style="color:var(--c-mute)">Customer · 8am–10pm</span></p></div>
+      <div class="card"><div class="icon">🚨</div><h3>Roadside Rescue</h3><p><a href="tel:+2348000000002" style="color:#fff;font-weight:600">+234 800 000 0002</a><br><span style="color:var(--c-mute)">24/7 · Lagos + Abuja coverage</span></p></div>
+      <div class="card"><div class="icon">✉️</div><h3>Email</h3><p><a href="mailto:hello@mechfind.ng" style="color:#fff;font-weight:600">hello@mechfind.ng</a><br><span style="color:var(--c-mute)">Reply within 4 working hours</span></p></div>
+      <div class="card"><div class="icon">⚠️</div><h3>Escalation</h3><p><a href="https://wa.me/2348000000001" style="color:#fff;font-weight:600">+234 800 000 0001</a><br><span style="color:var(--c-mute)">Disputes &amp; complaints · all hours</span></p></div>
+      <div class="card"><div class="icon">🏢</div><h3>Office</h3><p>284A Adeola Odeku Street<br>Victoria Island, Lagos<br><span style="color:var(--c-mute)">Nigeria</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#08080B">
+  <div class="wrap">
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+      <div>
+        <span class="kicker">Send us a message</span>
+        <h2>Drop a note. <span class="red">We read everything.</span></h2>
+        <p class="lede" style="margin-top:14px">Not urgent? Use the form. We'll reply within 4 working hours.</p>
+        <form class="mock">
+          <div class="form-grid">
+            <div class="field"><label>Name</label><input required placeholder="Your name"></div>
+            <div class="field"><label>Phone</label><input required placeholder="+234 800 000 0000"></div>
+            <div class="field full"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+            <div class="field full"><label>Subject</label>
+              <select required>
+                <option value="">Select a topic</option>
+                <option>General enquiry</option>
+                <option>Mechanic application</option>
+                <option>Existing booking</option>
+                <option>Complaint / Escalation</option>
+                <option>Partnership / Press</option>
+              </select>
+            </div>
+            <div class="field full"><label>Message</label><textarea required placeholder="Tell us what's on your mind..."></textarea></div>
+          </div>
+          <div style="margin-top:24px"><button class="btn btn-red" type="submit">Send Message</button></div>
+        </form>
+        <div class="success">
+          <div class="check">✓</div>
+          <h3 style="color:#fff">Message received. Thank you.</h3>
+          <p style="color:var(--c-mute);margin-top:8px">We'll get back to you within 4 working hours. If urgent, please call or WhatsApp.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:'Orbitron';font-size:1.4rem;color:#fff">Find us</h3>
+        <div style="margin-top:18px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--c-line);background:linear-gradient(135deg,#1f1f28,#0B0B0F);height:380px;display:flex;align-items:center;justify-content:center;color:var(--c-mute);font-size:.9rem;text-align:center;padding:24px">
+          <div>
+            <div style="font-size:3rem;margin-bottom:18px">📍</div>
+            <strong style="color:#fff;display:block;margin-bottom:6px">MECH FIND HQ</strong>
+            284A Adeola Odeku Street<br>
+            Victoria Island, Lagos<br>
+            Nigeria<br>
+            <span style="color:var(--c-red);margin-top:8px;display:block">Open: Mon–Sat 8:00 – 20:00</span>
+          </div>
+        </div>
+        <div style="margin-top:24px">
+          <h3 style="font-family:'Orbitron';font-size:1.2rem;color:#fff;margin-bottom:14px">Follow us</h3>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn-ghost" href="#">𝕏 / Twitter</a>
+            <a class="btn btn-ghost" href="#">Instagram</a>
+            <a class="btn btn-ghost" href="#">LinkedIn</a>
+            <a class="btn btn-whats" href="https://wa.me/2348000000000">WhatsApp Channel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rescue">
+      <div>
+        <h3 style="color:#fff;margin-bottom:4px">🚨 Live breakdown right now?</h3>
+        <p style="opacity:.92">Don't wait for a form reply. Phone the rescue hotline.</p>
+      </div>
+      <a class="btn btn-ghost" href="tel:+2348000000002" style="background:#fff;color:#80060C;border:none">Call Rescue Now →</a>
+    </div>
+  </div>
+</section>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot foot-brand">
+      <img src="https://www.genspark.ai/api/files/s/IfmJBbLr" alt="Mech Find">
+      <p>MECH FIND · WE FIND. YOU DRIVE. Connecting Nigerian car owners to verified mechanics across all 36 states + FCT.</p>
+      <div style="margin-top:14px">
+        <span class="badge b-gold" style="margin-right:6px">★ Gold</span>
+        <span class="badge b-silver">✔ Silver</span>
+        <span class="badge b-bronze" style="margin-left:6px">Bronze</span>
+      </div>
+    </div>
+    <div class="foot">
+      <h5>Platform</h5>
+      <ul>
+        <li><a href="#problem" data-route="problem">The Problem</a></li>
+        <li><a href="#how" data-route="how">How It Works</a></li>
+        <li><a href="#find" data-route="find">Find a Mechanic</a></li>
+        <li><a href="#trust" data-route="trust">Trust &amp; Verification</a></li>
+        <li><a href="#request" data-route="request">Get Started</a></li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h5>Help</h5>
+      <ul>
+        <li><a href="#guide" data-route="guide">Guide &amp; FAQ</a></li>
+        <li><a href="#pod" data-route="pod">The Pod</a></li>
+        <li><a href="#contact" data-route="contact">Contact</a></li>
+        <li><a href="#contact" data-route="contact">Roadside Rescue</a></li>
+        <li><a href="#request" data-route="request">Become a partner</a></li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="https://wa.me/2348000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+        <li><a href="mailto:hello@mechfind.ng">hello@mechfind.ng</a></li>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 Mech Find · Built by Viewport Pod · Webbo3 Academy</span>
+    <span>🇳🇬 Made in Nigeria</span>
+  </div>
+</footer>
+
+<script>
+/* MECH FIND — We Find. You Drive.
+   Author: Viewport Pod · Webbo3 Academy */
+
+// -------- mobile menu --------
+function initMenu(){
+  const btn=document.querySelector('.menu-btn');
+  const nav=document.querySelector('.nav-links');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+}
+
+// -------- active nav --------
+function markActive(){
+  const here=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    const href=a.getAttribute('href');
+    if(href===here||(here==='index.html'&&href==='index.html'))a.classList.add('active');
+  });
+}
+
+// -------- FAQ accordion --------
+function initFaq(){
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click',()=>{
+      item.classList.toggle('open');
+    });
+  });
+}
+
+// -------- tab switcher (request page) --------
+function initTabs(){
+  document.querySelectorAll('.tabs-wrap').forEach(wrap=>{
+    const btns=wrap.querySelectorAll('.tabs button');
+    const panes=wrap.querySelectorAll(':scope > div');
+    btns.forEach((b,i)=>b.addEventListener('click',()=>{
+      btns.forEach(x=>x.classList.remove('act'));
+      panes.forEach(x=>x.classList.remove('act'));
+      b.classList.add('act');
+      panes[i].classList.add('act');
+    }));
+  });
+}
+
+// -------- form success --------
+function initForms(){
+  document.querySelectorAll('form.mock').forEach(f=>{
+    f.addEventListener('submit',e=>{
+      e.preventDefault();
+      let ok=true;
+      f.querySelectorAll('[required]').forEach(i=>{
+        if(!i.value.trim()){ok=false;i.style.borderColor='var(--c-red)'}
+      });
+      if(!ok)return;
+      const s=f.closest('section').querySelector('.success');
+      if(s){s.classList.add('show');f.style.display='none';s.scrollIntoView({behavior:'smooth',block:'center'})}
+    });
+  });
+  document.querySelectorAll('input,select,textarea').forEach(el=>{
+    el.addEventListener('input',()=>el.style.borderColor='var(--c-line)');
+  });
+}
+
+// -------- range value --------
+function initRange(){
+  const r=document.getElementById('dist-range');
+  const v=document.getElementById('dist-val');
+  if(!r||!v)return;
+  r.addEventListener('input',()=>v.textContent=r.value+' km');
+}
+
+// -------- search/filter mechanics --------
+const mechanics=[
+  {id:1,name:"Chukwuemeka Okafor",city:"Lagos-Yaba",state:"Lagos",spec:["Engine","Transmission"],makes:["Toyota","Honda","Lexus"],dist:2.1,rating:4.9,tier:"gold",jobs:482,init:"CO",price:"₦35,000–₦120,000",phone:"+2348012345678",wa:"+2348012345678",bio:"15 yrs on Toyota & Lexus gearboxes. Runs well-oiled shop in Yaba. Same-day job possible."},
+  {id:2,name:"Aisha Bello",city:"Abuja-Wuse",state:"FCT ( Abuja )",spec:["Electrical","AC/Climate"],makes:["Mercedes-Benz","Toyota","Hyundai"],dist:1.4,rating:5.0,tier:"gold",jobs:367,init:"AB",price:"₦18,000–₦85,000",phone:"+2348098765432",wa:"+2348098765432",bio:"Auto-electrical queen. AC compressor guru. We fit original-spec alternators and ignitions."},
+  {id:3,name:"Olumide Akin",city:"Ikeja",state:"Lagos",spec:["Brakes","Suspension"],makes:["Honda","Toyota","Nissan"],dist:3.6,rating:4.8,tier:"silver",jobs:241,init:"OA",price:"₦12,000–₦45,000",phone:"+2349055551212",wa:"+2349055551212",bio:"Brake pad, disc, shock absorber specialist. Honest pricing, no wahala."},
+  {id:4,name:"Ibrahim Musa",city:"Kano-Nasarawa",state:"Kano",spec:["Engine","Diagnostics"],makes:["Toyota","Volkswagen","Peugeot"],dist:4.2,rating:4.7,tier:"gold",jobs:611,init:"IM",price:"₦40,000–₦210,000",phone:"+2348022223344",wa:"+2348022223344",bio:"Engine overhaul + diagnostics. Works on Peugeot 504/505 like wizard — northern Nigeria trusted name."},
+  {id:5,name:"Funmilayo Adebayo",city:"Ibadan-Bodija",state:"Oyo",spec:["Bodywork","Painting"],makes:["Toyota","Honda","Hyundai"],dist:5.5,rating:4.6,tier:"silver",jobs:158,init:"FA",price:"₦60,000–₦320,000",phone:"+2347088881100",wa:"+2347088881100",bio:"Body filler, panel beating, painting. We comot scrap sharp-sharp, give am new look."},
+  {id:6,name:"Emeka Nwosu",city:"Port Harcourt-GRA",state:"Rivers",spec:["Roadside Rescue","Battery","Oil Change"],makes:["Toyota","Honda","Mercedes-Benz","Land Rover"],dist:1.9,rating:4.9,tier:"gold",jobs:529,init:"EN",price:"₦8,000–₦60,000",phone:"+2348033335566",wa:"+2348033335566",bio:"24/7 roadside rescue PH. Bring battery, jump-start, on-the-spot minor repairs. Fast response."}
+];
+
+function tierBadge(t){
+  if(t==='gold')return'<span class="badge b-gold">★ Gold Verified</span>';
+  if(t==='silver')return'<span class="badge b-silver">✔ Silver Verified</span>';
+  return'<span class="badge b-bronze">Bronze</span>';
+}
+
+function renderResults(list){
+  const box=document.getElementById('result-list');
+  const cnt=document.getElementById('result-count');
+  if(!box)return;
+  if(!list.length){
+    box.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:60px;background:var(--c-card);border:1px solid var(--c-line);border-radius:var(--radius-lg);color:var(--c-mute)">No mechanic match this filter lai-lai. Try wider radius or clear state.</div>';
+    if(cnt)cnt.textContent='0';
+    return;
+  }
+  if(cnt)cnt.textContent=list.length;
+  box.innerHTML=list.map(m=>`
+    <article class="mech">
+      <div class="mech-top">
+        <div class="avatar">${m.init}</div>
+        <div class="mech-info" style="flex:1">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center">
+            <div class="nm">${m.name}</div>
+            ${tierBadge(m.tier)}
+          </div>
+          <div class="meta">${m.city} · ${m.spec.join(' · ')}</div>
+        </div>
+      </div>
+      <div class="mech-tags">
+        ${m.makes.map(x=>`<span class="tag">${x}</span>`).join('')}
+        <span class="tag" style="background:rgba(37,211,102,.12);color:#a7eccc;border-color:rgba(37,211,102,.35)">${m.price}</span>
+      </div>
+      <div class="mech-foot">
+        <div>
+          <span class="rating">★ ${m.rating.toFixed(1)}</span>
+          <span class="dist" style="margin-left:10px">📍 ${m.dist} km away</span>
+        </div>
+        <div class="act">
+          <a class="call" href="tel:${m.phone}">Call</a>
+          <a class="wp" target="_blank" href="https://wa.me/${m.wa.replace(/\D/g,'')}?text=${encodeURIComponent('Hello '+m.name.split(' ')[0]+', I found your profile on Mech Find. I need help with my car.')}" rel="noopener">WhatsApp</a>
+          <a class="vm" href="mechanic.html?id=${m.id}">View</a>
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function filterMechanics(){
+  const make=document.getElementById('f-make')?.value||'';
+  const state=document.getElementById('f-state')?.value||'';
+  const spec=document.getElementById('f-spec')?.value||'';
+  const radius=parseInt(document.getElementById('dist-range')?.value||'20');
+  const q=(document.getElementById('f-q')?.value||'').toLowerCase().trim();
+  const out=mechanics.filter(m=>{
+    if(make&&!m.makes.includes(make))return false;
+    if(state&&m.state!==state)return false;
+    if(spec&&!m.spec.includes(spec))return false;
+    if(m.dist>radius)return false;
+    if(q&&!(m.name.toLowerCase().includes(q)||m.city.toLowerCase().includes(q)))return false;
+    return true;
+  });
+  renderResults(out);
+}
+
+function initSearch(){
+  ['f-make','f-state','f-spec','f-q'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)el.addEventListener('input',filterMechanics);
+  });
+  const r=document.getElementById('dist-range');
+  if(r)r.addEventListener('input',filterMechanics);
+  const reset=document.getElementById('reset-btn');
+  if(reset)reset.addEventListener('click',e=>{
+    e.preventDefault();
+    ['f-make','f-state','f-spec','f-q'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});
+    document.getElementById('dist-range').value=20;
+    document.getElementById('dist-val').textContent='20 km';
+    filterMechanics();
+  });
+  filterMechanics();
+}
+
+// -------- mechanic detail loader --------
+function loadDetail(){
+  const slot=document.getElementById('mech-detail');
+  if(!slot)return;
+  const id=parseInt(new URLSearchParams(location.search).get('id')||'1');
+  const m=mechanics.find(x=>x.id===id)||mechanics[0];
+  document.title=`${m.name} – Mech Find`;
+  slot.innerHTML=`
+    <div class="profile-card">
+      <div class="avatar">${m.init}</div>
+      <h2>${m.name}</h2>
+      <div style="margin:10px 0 14px">${tierBadge(m.tier)}</div>
+      <p style="color:var(--c-mute);max-width:480px;margin:14px auto">${m.bio}</p>
+      <div class="stats" style="margin-top:18px;padding:18px;background:rgba(0,0,0,.3)">
+        <div class="stat"><div class="n">${m.rating.toFixed(1)}★</div><div class="l">Rating</div></div>
+        <div class="stat"><div class="n">${m.jobs}</div><div class="l">Jobs</div></div>
+        <div class="stat"><div class="n">${m.dist} km</div><div class="l">Away</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:18px">
+        <a class="btn btn-red" href="tel:${m.phone}">📞 Call ${m.phone}</a>
+        <a class="btn btn-whats" target="_blank" href="https://wa.me/${m.wa.replace(/\D/g,'')}?text=${encodeURIComponent('Hi '+m.name.split(' ')[0]+', I want to book Mech Find service.')}" rel="noopener">🟢 WhatsApp Now</a>
+      </div>
+    </div>
+    <div>
+      <h3>Skills & Specialties</h3>
+      <div class="mech-tags" style="padding:0;margin:14px 0">${m.spec.map(s=>`<span class="tag">${s}</span>`).join('')}</div>
+      <h3 style="margin-top:18px">Car Makes Serviced</h3>
+      <div class="mech-tags" style="padding:0;margin:14px 0">${m.makes.map(s=>`<span class="tag" style="background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.15)">${s}</span>`).join('')}</div>
+      <h3 style="margin-top:18px">Availability — this week</h3>
+      <div class="cal">
+        ${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map((d,i)=>`<div class="${i<5?'free':(i===5?'busy':'free')}">${d}<br>${i<5?'Open':(i===5?'Busy':'On call')}</div>`).join('')}
+      </div>
+      <h3 style="margin-top:24px">Pricing Guide</h3>
+      <p style="color:var(--c-mute);font-size:.9rem">Indicative range: <span style="color:var(--c-red);font-weight:600">${m.price}</span>. Final price after diagnosis.</p>
+      <h3 style="margin-top:24px">Past Work Gallery</h3>
+      <div class="gallery" style="margin-top:14px">
+        <div>Alternator</div><div>Brake Disc</div><div>AC Service</div>
+        <div>Suspension</div><div>Diagnostics</div><div>Engine Tune</div>
+      </div>
+    </div>
+  `;
+
+  const reviews=document.getElementById('reviews');
+  if(reviews){
+    const list=[
+      {who:"Tunde — Lagos",when:"3 days ago",text:"Replaced my Honda alternator in 2 hours. Original part, fair price. No wahala."},
+      {who:"Ngozi — Abuja",when:"1 week ago",text:"Diagnosed electrical fault three other workshops missed. Smart sharp mechanic."},
+      {who:"Bashir — Kano",when:"2 weeks ago",text:"Engine overhaul on my Peugeot, finished a day early. Money well spent."},
+      {who:"Chinwe — PH",when:"1 month ago",text:"Punctual, polite, work was clean. I will use am again for my wife's car."}
+    ];
+    reviews.innerHTML='<h3 style="margin-bottom:14px">Customer Reviews</h3>'+list.map(r=>`
+      <div class="review">
+        <div style="display:flex;justify-content:space-between">
+          <div class="who">${r.who}</div>
+          <div class="when">${r.when}</div>
+        </div>
+        <div style="color:#FFD700;margin:6px 0">★★★★★</div>
+        <p style="color:var(--c-text);margin-top:6px">${r.text}</p>
+      </div>
+    `).join('');
+  }
+}
+
+// (router-controlled init below)
+// initMenu();markActive();initFaq();initTabs();initForms();initRange();initSearch();loadDetail();
+
+// Router-aware active marker
+function markActiveRoute(){
+  const here = (location.hash.replace('#','')) || 'index';
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    const r = a.dataset.route;
+    if(r === here || (here==='mechanic' && r==='find')) a.classList.add('active');
+  });
+}
+window.addEventListener('hashchange',markActiveRoute);
+document.addEventListener('DOMContentLoaded',()=>{
+  initMenu(); markActiveRoute(); initFaq(); initTabs(); initForms(); initRange();
+});
+
+</script>
+<script>
+(function(){
+  // Hash router — show only the requested page
+  const pages = ['index','problem','how','find','mechanic','trust','request','guide','pod','contact'];
+  function show(route){
+    if(!pages.includes(route)) route='index';
+    document.querySelectorAll('.page').forEach(s=>{
+      s.style.display = (s.dataset.page===route)?'block':'none';
+    });
+    document.querySelectorAll('[data-route]').forEach(a=>{
+      a.classList.toggle('active', a.dataset.route===route);
+    });
+    history.replaceState(null,'','#'+route);
+    window.scrollTo(0,0);
+    if(typeof filterMechanics==='function' && route==='find'){try{filterMechanics()}catch(e){}}
+    if(typeof loadDetail==='function' && route==='mechanic'){try{loadDetail()}catch(e){}}
+  }
+  window.addEventListener('hashchange',()=>show(location.hash.replace('#','')||'index'));
+  // patch internal links to use hash
+  document.addEventListener('click',e=>{
+    const a=e.target.closest('a');
+    if(!a)return;
+    const href=a.getAttribute('href')||'';
+    if(href.startsWith('#') && !href.startsWith('#!')){
+      e.preventDefault();
+      show(href.replace('#',''));
+    }
+  });
+  const initial = location.hash.replace('#','') || 'index';
+  show(initial);
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

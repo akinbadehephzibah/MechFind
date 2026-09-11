@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pod &mdash; Mech Find</title>
+<meta name="description" content="Viewport Pod: ten people, seven days, one problem. The story behind Mech Find, the team who built it, and the values we refused to compromise.">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16 9.6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17.4v.2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 1.5a12 12 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V4h9v17"/><path d="M14 9h5v12"/><path d="M8 8h3M8 12h3M8 16h3M17 13v4"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M3 20c0-3.4 2.7-5.2 6-5.2s6 1.8 6 5.2"/><path d="M16 5.4a3.4 3.4 0 0 1 0 6.4"/><path d="M17.5 14.6c2.1.6 3.5 2.1 3.5 4.4"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 14l2-6h12l2 6v5h-3v-2H7v2H4z"/><circle cx="7.5" cy="14.5" r="1.3"/><circle cx="16.5" cy="14.5" r="1.3"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M6.5 14.5h3"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.8"/><path d="M6.5 9v6M17.5 9v6"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M5.5 10v8M9.5 10v8M14.5 10v8M18.5 10v8"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 5h8a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h10"/><circle cx="5" cy="5" r="1.6"/><circle cx="19" cy="19" r="1.6"/></symbol>
+  <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6.1 6.1l1.4 1.4M16.5 16.5l1.4 1.4M17.9 6.1l-1.4 1.4M7.5 16.5l-1.4 1.4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+        <span class="brand__text">
+          <span class="brand__name">Mech Find</span>
+          <span class="brand__tag">We find. You drive.</span>
+        </span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
+      <label class="nav-toggle-label" for="nav-toggle">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        <span class="sr-only">Menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="problem.html">The Problem</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="find.html">Find a Mechanic</a>
+        <a href="trust.html">Trust</a>
+        <a href="guide.html">Guide &amp; FAQ</a>
+        <a href="pod.html" aria-current="page">The Pod</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="request.html">Get Started</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>The Pod</li></ol>
+    <p class="eyebrow">Ten people. One pod. One problem.</p>
+    <h1>The Pod</h1>
+    <p class="page-head__tagline">One team &middot; different perspectives &middot; one problem</p>
+    <p class="lede">Viewport Pod, Webbo3 Academy. On day one we had no idea. By day seven we had MECH FIND.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap wrap--tight">
+    <div class="section-head section-head--center">
+      <p class="eyebrow">Our story</p>
+      <h2>Every project starts somewhere.</h2>
+    </div>
+    <p class="lede" style="margin-inline:auto">Ours started with ten people, a lot of different ideas, and one simple challenge: <em>what real problem can we solve?</em> We did not begin with a perfect concept. We began by talking. Sharing, questioning, and challenging each other&rsquo;s thinking. Somewhere in those conversations we started looking at problems people meet in ordinary life.</p>
+    <p class="lede" style="margin:20px auto 0">One stood out: finding the right mechanic when your car develops a fault. At first it sounded simple &mdash; there are mechanics everywhere, so why should this be hard? But the more we asked <em>who is affected</em>, <em>what does it cost</em>, <em>what already exists</em> and <em>why is that not enough</em>, the clearer it became that the gap is real, deep, and worth solving properly.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Seven days</p>
+      <h2>How MECH FIND was built.</h2>
+    </div>
+
+    <ol class="timeline">
+      <li>
+        <span class="when">Days 1&ndash;3</span>
+        <h3>From problem to identity</h3>
+        <p>We discussed everyday problems and settled on mechanic discovery as the one worth investigating. Research followed: the experience of car owners and mechanics, the discovery channels that already exist, and the competing automotive platforms. On day three the idea got its name and its visual identity &mdash; a mark holding a car, a gear and a wrench together.</p>
+      </li>
+      <li>
+        <span class="when">Day 4</span>
+        <h3>Individual pages</h3>
+        <p>Planning moved into implementation. Each team member took an assigned page and built it in HTML and CSS, with the emphasis on structure, readability, consistency and the wider user experience.</p>
+      </li>
+      <li>
+        <span class="when">Day 5</span>
+        <h3>Completion and refinement</h3>
+        <p>Pages were reviewed and refined. We corrected issues, adjusted layouts and improved presentation before committing the finished work to our individual GitHub accounts.</p>
+      </li>
+      <li>
+        <span class="when">Day 6</span>
+        <h3>Integration</h3>
+        <p>Separate contributions were merged through GitHub into a single site, without losing the experience any individual page had been designed around.</p>
+      </li>
+      <li>
+        <span class="when">Day 7</span>
+        <h3>Launch and submission</h3>
+        <p>The site was prepared for submission and hosted. Project materials and the README were finalised, marking the move from an initial concept to a completed digital product.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <p class="eyebrow">Meet the team</p>
+      <h2>Ten hands. One build.</h2>
+      <p class="lede" style="margin-inline:auto">Each member owned a page of this site end to end, from structure to copy to styling.</p>
+    </div>
+
+    <div class="team">
+      <article class="member"><span class="avatar">OO</span><p class="member__name">Oluwaferanmi Oladapo</p><p class="member__role">Landing page</p></article>
+      <article class="member"><span class="avatar">HY</span><p class="member__name">Haibah Yusuff</p><p class="member__role">The Problem</p></article>
+      <article class="member"><span class="avatar">AH</span><p class="member__name">Akinku Hephzibah</p><p class="member__role">How It Works</p></article>
+      <article class="member"><span class="avatar">OO</span><p class="member__name">Oladimeji Olatomiwa</p><p class="member__role">Main working page</p></article>
+      <article class="member"><span class="avatar">OE</span><p class="member__name">Ojo Oluwasemilogo Emmanuel</p><p class="member__role">Detail page</p></article>
+      <article class="member"><span class="avatar">TO</span><p class="member__name">Testimony Onilede</p><p class="member__role">Trust &amp; Verification</p></article>
+      <article class="member"><span class="avatar">AI</span><p class="member__name">Ajewole Israel</p><p class="member__role">Request / Get Started</p></article>
+      <article class="member"><span class="avatar">EC</span><p class="member__name">Ede Comfort Salome</p><p class="member__role">Guide &amp; FAQ</p></article>
+      <article class="member"><span class="avatar">AB</span><p class="member__name">Aishat Bolanle Akinade</p><p class="member__role">The Pod page</p></article>
+      <article class="member"><span class="avatar">IV</span><p class="member__name">Iwegbu Victor</p><p class="member__role">Contact &amp; site shell</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Our values</p>
+        <h2>What we refuse to compromise.</h2>
+        <p class="lede" style="margin-top:16px">These five commitments decided every argument we had during the build, and they still decide them now.</p>
+      </div>
+      <ul class="feature-list">
+        <li><strong>Trust first</strong><span>Every badge, every review and every price is verified. Fakes are removed, not hidden.</span></li>
+        <li><strong>Local tone</strong><span>Pidgin welcome, Pidgin encouraged. Nigerians building for Nigerians.</span></li>
+        <li><strong>No hidden fees</strong><span>You pay the mechanic directly. We charge the mechanic, never the car owner.</span></li>
+        <li><strong>Accountability</strong><span>If something goes wrong we mediate. The trust signal is the platform, not just the profile.</span></li>
+        <li><strong>Speed</strong><span>A breakdown is urgent. Sixty-minute response, fourteen-minute average rescue.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="callout">
+      <div class="callout__body">
+        <h2>Built by ten. Supported by you.</h2>
+        <p>If MECH FIND helps you, share it with one Nigerian who dreads their next car repair.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--whatsapp" href="https://wa.me/?text=Check%20out%20Mech%20Find%20-%20verified%20mechanics%20across%20Nigeria." rel="noopener">Share on WhatsApp</a>
+        <a class="btn btn--light" href="contact.html">Work with us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+          <span class="brand__text">
+            <span class="brand__name">Mech Find</span>
+            <span class="brand__tag">We find. You drive.</span>
+          </span>
+        </a>
+        <p>Connecting Nigerian car owners to verified mechanics &mdash; by car make, by fault, by distance. Built by Viewport Pod.</p>
+        <p style="margin-top:14px">
+          <span class="badge badge--gold">Gold</span>
+          <span class="badge badge--silver">Silver</span>
+          <span class="badge badge--bronze">Bronze</span>
+        </p>
+      </div>
+
+      <div>
+        <h2>Platform</h2>
+        <ul>
+          <li><a href="problem.html">The Problem</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="find.html">Find a Mechanic</a></li>
+          <li><a href="trust.html">Trust &amp; Verification</a></li>
+          <li><a href="request.html">Get Started</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="guide.html">Guide &amp; FAQ</a></li>
+          <li><a href="guide.html#pricing">Pricing guide</a></li>
+          <li><a href="trust.html#escalation">Raise a complaint</a></li>
+          <li><a href="contact.html">Roadside Rescue</a></li>
+          <li><a href="request.html#panel-mech">Become a partner</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          <li><a href="https://wa.me/2348000000000" rel="noopener">WhatsApp us</a></li>
+          <li><a href="mailto:hello@mechfind.ng">hello@mechfind.ng</a></li>
+          <li><a href="contact.html">Victoria Island, Lagos</a></li>
+          <li><a href="pod.html">About the team</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Mech Find &middot; Built by Viewport Pod &middot; Webbo3 Academy</span>
+      <span>Made in Nigeria &middot; We find. You drive.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

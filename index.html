@@ -1,263 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MechFind — Emergency Auto Repair Ojodu</title>
-  <link rel="stylesheet" href="style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
-    rel="stylesheet"
-  >
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mech Find &mdash; We Find. You Drive. | Verified mechanics across Nigeria</title>
+<meta name="description" content="Mech Find connects Nigerian car owners to verified mechanics by car make, fault type and distance. Search free, see pricing upfront, contact directly.">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-<main>
+<a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header">
-      <div class="header-text">
-        <div class="brand-logo">MechFind</div>
-        <div class="tagline">Ojodu Local Discovery</div>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16 9.6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17.4v.2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 1.5a12 12 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V4h9v17"/><path d="M14 9h5v12"/><path d="M8 8h3M8 12h3M8 16h3M17 13v4"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M3 20c0-3.4 2.7-5.2 6-5.2s6 1.8 6 5.2"/><path d="M16 5.4a3.4 3.4 0 0 1 0 6.4"/><path d="M17.5 14.6c2.1.6 3.5 2.1 3.5 4.4"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 14l2-6h12l2 6v5h-3v-2H7v2H4z"/><circle cx="7.5" cy="14.5" r="1.3"/><circle cx="16.5" cy="14.5" r="1.3"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M6.5 14.5h3"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.8"/><path d="M6.5 9v6M17.5 9v6"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M5.5 10v8M9.5 10v8M14.5 10v8M18.5 10v8"/><path d="M3 21h18"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 5h8a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h10"/><circle cx="5" cy="5" r="1.6"/><circle cx="19" cy="19" r="1.6"/></symbol>
+  <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6.1 6.1l1.4 1.4M16.5 16.5l1.4 1.4M17.9 6.1l-1.4 1.4M7.5 16.5l-1.4 1.4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+        <span class="brand__text">
+          <span class="brand__name">Mech Find</span>
+          <span class="brand__tag">We find. You drive.</span>
+        </span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open navigation menu">
+      <label class="nav-toggle-label" for="nav-toggle">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        <span class="sr-only">Menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="problem.html">The Problem</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="find.html">Find a Mechanic</a>
+        <a href="trust.html">Trust</a>
+        <a href="guide.html">Guide &amp; FAQ</a>
+        <a href="pod.html">The Pod</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="request.html">Get Started</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <h1>Find the right mechanic, not just the nearest one.</h1>
+        <p class="lede">Mech Find connects Nigerian car owners to verified mechanics by car make, by fault, by distance. See the skills, the verification tier and the price range before you call &mdash; then contact the mechanic directly.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="find.html"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg> Find a mechanic</a>
+          <a class="btn btn--whatsapp" href="https://wa.me/2348000000000?text=Hello%20Mech%20Find%2C%20I%20need%20help%20with%20my%20car." rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp us</a>
+        </div>
+        <p style="margin-top:22px"><a class="link-arrow" href="request.html#panel-mech">Are you a mechanic? Join the network</a></p>
       </div>
 
-      <div class="header-logo">
-    <img src=logo.jpg alt= A Car Logo>
+      <div class="hero__mark">
+        <img src="assets/img/logo.png" alt="The MECH FIND logo: a car, a gear and a wrench">
+        <p class="tagline">We find. You drive.</p>
+      </div>
     </div>
-  </header>
+  </div>
+</section>
 
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="stat__n">1,240+</div><div class="stat__l">Verified mechanics</div></div>
+      <div class="stat"><div class="stat__n">36 + FCT</div><div class="stat__l">States covered</div></div>
+      <div class="stat"><div class="stat__n">12,500+</div><div class="stat__l">Jobs completed</div></div>
+      <div class="stat"><div class="stat__n">14 min</div><div class="stat__l">Average response</div></div>
+    </div>
+  </div>
+</section>
 
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The journey</p>
+      <h2>From a breakdown to a working car.</h2>
+      <p class="lede">Find the right specialist, understand the cost, check the trust signals, get the repair, and keep the mechanic accountable afterwards.</p>
+    </div>
 
-  <main class="page">
-    <section class="hero-section">
-      <span class="badge-location">Ojodu, Lagos State</span>
-      <h1>Stranded in Ojodu? Find a Mechanic Fast.</h1>
-      <p class="hero-desc">Direct contact with verified, active automobile mechanics available immediately around Ojodu-Berger.</p>
-      
-      <a href="#directory" class="btn-primary-action">View Verified Mechanics Now</a>
-    </section>
-
-    
-
-    <section id="directory">
-      <h2 class="section-title">Verified Mechanics in Ojodu</h2>
-
-      <article class="artisan-card">
-        <h3 class="artisan-name">Tunde Bakare</h3>
-        <div class="verified-badge">✓ Verified Local Specialist</div>
-
-        <div class="details-grid">
-          <div class="detail-item"><strong>Specialism:</strong> Japanese Engines & Brake Overhauls</div>
-          <div class="detail-item"><strong>Exact Area:</strong> Ojodu-Berger Junction, Lagos</div>
-          <div class="detail-item"><strong>Call-Out Fee:</strong> ₦5,000 (Roadside Assessment)</div>
-        </div>
-
-        <div class="trust-box">
-          <p>"12 years experience repairing Toyota and Honda models on the Berger expressway. Arrives on site within 20 minutes."</p>
-        </div>
-
-        <a href="tel:+2348000000000" class="btn-call">Call Tunde Directly</a>
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-search"/></svg></span>
+        <h3>Find the right specialist</h3>
+        <p>Filter by car make, fault type, state and distance. You are matched to mechanics who actually work on your car, not whoever is closest.</p>
       </article>
-
-      <article class="artisan-card">
-        <h3 class="artisan-name">Chidi Nwosu</h3>
-        <div class="verified-badge">✓ Verified Electrical Specialist</div>
-
-        <div class="details-grid">
-          <div class="detail-item"><strong>Specialism:</strong> Car Wiring & Battery Diagnostics</div>
-          <div class="detail-item"><strong>Exact Area:</strong> Morgan Street, Ojodu</div>
-          <div class="detail-item"><strong>Call-Out Fee:</strong> ₦4,000 (System Scanning)</div>
-        </div>
-
-        <div class="trust-box">
-          <p>"Certified autoelectrician equipped with mobile diagnostic scanners. Transparent parts billing guaranteed."</p>
-        </div>
-
-        <a href="tel:+2348000000000" class="btn-call">Call Chidi Directly</a>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-cash"/></svg></span>
+        <h3>Understand the cost</h3>
+        <p>Indicative price ranges in Naira, published before you commit. Pay by bank transfer, POS or cash on delivery &mdash; your choice.</p>
       </article>
-    </section>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-shield"/></svg></span>
+        <h3>Check the trust signals</h3>
+        <p>Every mechanic carries a Bronze, Silver or Gold verification tier, with real reviews, real photos and a real shop address on file.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-cog"/></svg></span>
+        <h3>Get the repair</h3>
+        <p>Call or WhatsApp the mechanic directly. No middleman, no commission taken from you, no extra layer between you and the work.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-check"/></svg></span>
+        <h3>Accountability after the job</h3>
+        <p>A workmanship warranty on every Gold-tier booking. If something goes wrong afterwards, we help you escalate it &mdash; at no cost.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-alert"/></svg></span>
+        <h3>Roadside rescue, 24/7</h3>
+        <p>Battery jump-starts, towing and on-the-spot fixes. Call the rescue hotline and a partner mechanic is dispatched to your location.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <span class="pill">THE PROBLEM</span>
-      <h1>Your car breaks down in Ojodu. You don’t know who to call.</h1>
-      <p class="lede">
-        When your car develops a problem, finding someone is only the first step. The harder question is knowing who can
-        actually fix it, and who you can trust.
-      </p>
-      <section>
-      <h2>Who this affects:</h2>
-      <div class="affected-card">
-        <p>
-          Car owners in and around Ojodu-Berger whose vehicle develops a fault —
-          a strange noise, a dead battery, an AC that's stopped working — often
-          without warning, and often without a mechanic they already trust for
-          that specific problem.
-        </p>
-        <p>
-          Many aren't sure what's actually wrong, let alone which kind of
-          mechanic they need: an electrical fault can look identical to an
-          engine problem to someone who isn't a mechanic themselves. Some are
-          stranded outright, in an unfamiliar part of Ojodu, with a phone and no
-          plan.
-        </p>
+<section class="section">
+  <div class="wrap">
+    <div class="split split--center">
+      <div>
+        <p class="eyebrow">The problem we exist to solve</p>
+        <h2>Every day, Nigerians lose time, money and trust on the wrong mechanic.</h2>
+        <p class="lede" style="margin-top:16px">Your alternator dies on a Saturday. You push the car to the nearest roadside workshop, a counterfeit part goes in, you are charged &#8358;45,000, and it fails again on the way home. We kept asking why this is still normal. Mech Find is our answer.</p>
+        <p style="margin-top:24px"><a class="link-arrow" href="problem.html">Read the full research</a></p>
       </div>
-      </section>
 
-      <section>
-        <h2>What it costs them</h2>
-        <div class="cost-grid">
-            <div class="cost-card">
-                <div class="cost-label">MONEY</div>
-                <ul>
-                    <li>Wrong diagnosis, unnecessary repairs.</li>
-                    <li>Unclear or shifting charges.</li>
-                    <li>Paying two mechanics for one problem.</li>
-                </ul>
-            </div>
-            <div class="cost-card">
-                <div class="cost-label">TIME</div>
-                <ul>
-                    <li>Hours or days to find the right person.</li>
-                    <li>Missed work, cancelled plans.</li>
-                    <li>Car unavailable while they search.</li>
-                </ul>
-            </div>
-            <div class="cost-card">
-                <div class="cost-label">EMOTIONAL STRESS/TRUST</div>
-                <ul>
-                    <li>No way to check who's reliable first.</li>
-                    <li>Fear of being overcharged or stranded.</li>
-                    <li>No recourse if the repair fails.</li>
-                </ul>
-            </div>
+      <div class="card card--flat">
+        <h3>What it costs, in practice</h3>
+        <ul class="feature-list" style="margin-top:16px">
+          <li><strong>Paying twice</strong><span>&#8358;25,000&ndash;&#8358;180,000 for a wrong repair, then again for the correct one.</span></li>
+          <li><strong>Days without the car</strong><span>Missed work, cancelled school runs, delayed business deliveries.</span></li>
+          <li><strong>No way to check first</strong><span>No trust signal beyond word of mouth and a friend&rsquo;s recommendation.</span></li>
+          <li><strong>No recourse</strong><span>When the repair fails, there is usually nobody to escalate it to.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <p class="eyebrow">Why it works</p>
+      <h2>Built by ten Nigerians, for Nigeria.</h2>
+      <p class="lede" style="margin-inline:auto">Viewport Pod at Webbo3 Academy &mdash; one team, ten perspectives, one problem worth solving properly.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-pin"/></svg></span>
+        <h3>Distance matters</h3>
+        <p>If your car will not start in Lekki, a mechanic in Kano is not a result. Search runs on an intelligent 1&ndash;20km radius.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-star"/></svg></span>
+        <h3>Verified, not claimed</h3>
+        <p>Gold-tier workshops are visited in person. We see the work, we test the claim, and we recheck the listing every year.</p>
+      </article>
+      <article class="card">
+        <span class="card__icon"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-chat"/></svg></span>
+        <h3>Built for how we communicate</h3>
+        <p>WhatsApp first. Phone calls answered. Pidgin welcome. No corporate email chain before anybody looks at your car.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Directory</p>
+      <h2>A sample of the verified network.</h2>
+      <p class="lede">Every listing shows the same six things: skills, car makes serviced, distance, verification tier, indicative pricing and availability.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <span class="avatar">CO</span>
+          <div>
+            <h3 class="mech__name"><a href="mechanics/mechanic-1.html">Chukwuemeka Okafor</a></h3>
+            <p class="mech__meta">Yaba, Lagos &middot; Engine &amp; transmission</p>
+          </div>
         </div>
-      </section>
+        <p style="margin-top:16px"><span class="badge badge--gold">Gold verified</span> <span class="price-tag">&#8358;35,000&ndash;&#8358;120,000</span></p>
+      </article>
+      <article class="card">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <span class="avatar">AB</span>
+          <div>
+            <h3 class="mech__name"><a href="mechanics/mechanic-2.html">Aisha Bello</a></h3>
+            <p class="mech__meta">Wuse, Abuja &middot; Electrical &amp; AC</p>
+          </div>
+        </div>
+        <p style="margin-top:16px"><span class="badge badge--gold">Gold verified</span> <span class="price-tag">&#8358;18,000&ndash;&#8358;85,000</span></p>
+      </article>
+      <article class="card">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <span class="avatar">TB</span>
+          <div>
+            <h3 class="mech__name"><a href="mechanics/mechanic-7.html">Tunde Bakare</a></h3>
+            <p class="mech__meta">Ojodu-Berger, Lagos &middot; Engine &amp; brakes</p>
+          </div>
+        </div>
+        <p style="margin-top:16px"><span class="badge badge--gold">Gold verified</span> <span class="price-tag">&#8358;15,000&ndash;&#8358;140,000</span></p>
+      </article>
+    </div>
 
-      <div class="hero-content">
+    <p style="margin-top:32px"><a class="link-arrow" href="find.html">Browse all verified mechanics</a></p>
+  </div>
+</section>
 
-      <div class="hero-label">
-        ✓ MECHFIND TRUST
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="callout callout--alert">
+      <div class="callout__body">
+        <h2>Roadside rescue hotline &middot; 24/7</h2>
+        <p>Battery jump-starts, towing and on-the-spot minor repairs. We come to you, anywhere in Lagos and Abuja, at any hour.</p>
       </div>
-
-      <h1>
-        Know who you're trusting with your car.
-      </h1>
-
-      <p>
-        MECH FIND is designed to make mechanic discovery more transparent,
-        so you can see relevant skills, verification information,
-        availability and customer feedback before getting in touch.
-      </p>
-
+      <a class="btn btn--light" href="tel:+2348000000002"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> +234 800 000 0002</a>
     </div>
+  </div>
+</section>
+</main>
 
-    </div>
-
-  </section>
-
-
-  
-    <!-- =========================
-         FINAL TRUST CTA
-    ========================= -->
-
-    <section class="trust-panel">
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <span class="brand__plate"><img src="assets/img/logo-mark.png" alt=""></span>
+          <span class="brand__text">
+            <span class="brand__name">Mech Find</span>
+            <span class="brand__tag">We find. You drive.</span>
+          </span>
+        </a>
+        <p>Connecting Nigerian car owners to verified mechanics &mdash; by car make, by fault, by distance. Built by Viewport Pod.</p>
+        <p style="margin-top:14px">
+          <span class="badge badge--gold">Gold</span>
+          <span class="badge badge--silver">Silver</span>
+          <span class="badge badge--bronze">Bronze</span>
+        </p>
+      </div>
 
       <div>
-        <h2>
-          Ready to find the right mechanic?
-        </h2>
-
-        <p>
-          Search by problem, specialty or location and compare the
-          information available on mechanic profiles before contacting one.
-        </p>
+        <h2>Platform</h2>
+        <ul>
+          <li><a href="problem.html">The Problem</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="find.html">Find a Mechanic</a></li>
+          <li><a href="trust.html">Trust &amp; Verification</a></li>
+          <li><a href="request.html">Get Started</a></li>
+        </ul>
       </div>
 
-      <button class="trust-button" id="findMechanic">
-        Find a Mechanic →
-      </button>
-
-    </section>
-
-  </main>
-
-
-  
-
-  <section class="double">
-  <section class="form-container">
-    <header class="form-header">
-      <h1>Book a Mechanic in Ojodu</h1>
-      <p>Stranded? We dispatch verified mechanics to your exact location in Ojodu within 30 minutes.</p>
-    </header>
-
-    <form class="booking-form" action="#" method="POST">
-      <div class="form-group">
-        <label for="fullName">Your Name</label>
-        <input type="text" id="fullName" name="fullName" placeholder="e.g. Chinedu Okafor" required>
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="guide.html">Guide &amp; FAQ</a></li>
+          <li><a href="guide.html#pricing">Pricing guide</a></li>
+          <li><a href="trust.html#escalation">Raise a complaint</a></li>
+          <li><a href="contact.html">Roadside Rescue</a></li>
+          <li><a href="request.html#panel-mech">Become a partner</a></li>
+        </ul>
       </div>
 
-      <div class="form-group">
-        <label for="phone">Phone Number (WhatsApp active)</label>
-        <input type="tel" id="phone" name="phone" placeholder="080..." required>
-      </div>
-
-      <div class="form-group">
-        <label for="location">Where exactly in Ojodu are you?</label>
-        <input type="text" id="location" name="location" placeholder="e.g. Berger bus stop, facing the bridge" required>
-      </div>
-
-      <div class="form-group">
-        <label for="issue">What is the problem?</label>
-        <textarea id="issue" name="issue" rows="4" placeholder="e.g. Car won't start, battery is dead" required></textarea>
-      </div>
-
-      <button type="submit" class="btn-submit">Find My Mechanic</button>
-      
-      <div class="post-submit-notice">
-        <strong>What happens next:</strong> You will not be charged yet. We will immediately WhatsApp you the name, photo, and call-out fee of the nearest available mechanic for your approval.
-      </div>
-    </form>
-  </section>
-
-
-  <section class="faq-container">
-    <div class="faq-header">
-      <span class="badge">  Guide & FAQ</span>
-      <h2>Frequently Asked Questions</h2>
-      <p>Straight answers for when you need a verified local artisan immediately.</p>
-    </div>
-
-    <div class="faq-grid">
-      <div class="faq-card">
-        <h3>How quickly can an artisan reach my location?</h3>
-        <p>Most listed artisans operate within your immediate neighborhood and can arrive within 30 to 60 minutes of direct contact, depending on traffic.</p>
-      </div>
-
-      <div class="faq-card">
-        <h3>Are the contact details verified?</h3>
-        <p>Yes. Every phone number and shop address listed on Viewport Pod is manually confirmed before going live. No ghost listings or inactive lines.</p>
-      </div>
-
-      <div class="faq-card">
-        <h3>Do I pay through the platform or directly to the artisan?</h3>
-        <p>You agree on pricing and pay the artisan directly via cash or bank transfer once the job scope is clear. We do not charge middleman transaction fees.</p>
-      </div>
-
-      <div class="faq-card">
-        <h3>What if I am not satisfied with the work done?</h3>
-        <p>Every artisan profile includes clear pricing expectations and recent client feedback. If a dispute arises, reach out via our community flag system so we can re-evaluate their listing.</p>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          <li><a href="https://wa.me/2348000000000" rel="noopener">WhatsApp us</a></li>
+          <li><a href="mailto:hello@mechfind.ng">hello@mechfind.ng</a></li>
+          <li><a href="contact.html">Victoria Island, Lagos</a></li>
+          <li><a href="pod.html">About the team</a></li>
+        </ul>
       </div>
     </div>
-  </section></section>
 
+    <div class="footer-bottom">
+      <span>&copy; 2026 Mech Find &middot; Built by Viewport Pod &middot; Webbo3 Academy</span>
+      <span>Made in Nigeria &middot; We find. You drive.</span>
+    </div>
+  </div>
+</footer>
 
-
-  
-  
-
-</main>
 </body>
+</html>
